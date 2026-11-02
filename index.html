@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ytalo Lima — Portfólio de Desenvolvimento de Software &amp; Estudo de Caso ATHLETIX</title>
+  <meta name="description" content="Portfólio profissional de Ytalo Gabriel de Lima Silva (Ytalo Lima), desenvolvedor de software em formação. Conheça sua trajetória, repertório técnico e o estudo de caso completo da plataforma esportiva ATHLETIX.">
+  <meta name="author" content="Ytalo Gabriel de Lima Silva">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B0D0C" id="meta-theme-color">
+
+  <!-- Open Graph / Compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Ytalo Lima — Portfólio de Engenharia de Software &amp; Caso ATHLETIX">
+  <meta property="og:description" content="Transformando curiosidade em tecnologia, ideias em sistemas e aprendizado em projetos reais. Estudo de caso completo do produto ATHLETIX.">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:image:alt" content="Portfólio de Ytalo Lima com destaque para o estudo de caso de engenharia de software do ATHLETIX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ytalo Lima — Portfólio de Desenvolvimento de Software">
+  <meta name="twitter:description" content="Experiências digitais, arquitetura de software, bancos de dados e o estudo de caso completo da plataforma ATHLETIX.">
+  <meta name="twitter:image" content="assets/images/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Inicialização imediata do tema para evitar flash visual -->
+  <script>
+    (function () {
+      try {
+        document.documentElement.classList.add('js-enabled');
+        var saved = localStorage.getItem('ytalo-portfolio-theme');
+        var theme = saved === 'light' || saved === 'dark' ? saved : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <!-- Indicador de Progresso de Leitura -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Cabeçalho Fixo -->
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Ytalo Lima — Voltar ao início">
+        <span class="brand__mark" aria-hidden="true">YL</span>
+        <span class="brand__text">
+          <span class="brand__name">YTALO LIMA</span>
+          <span class="brand__role">Engenharia &amp; Produto Digital</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="site-nav__link" href="#inicio" data-nav-target="inicio" aria-current="true">Início</a>
+        <a class="site-nav__link" href="#sobre" data-nav-target="sobre">Sobre</a>
+        <a class="site-nav__link" href="#athletix" data-nav-target="projetos">Projetos</a>
+        <a class="site-nav__link" href="#tecnologias" data-nav-target="tecnologias">Tecnologias</a>
+        <a class="site-nav__link" href="#contato" data-nav-target="contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Alternar para modo claro"
+          title="Alternar tema claro ou escuro"
+        >
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="theme-toggle__label" id="theme-toggle-label">Modo claro</span>
+        </button>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Abrir menu de navegação"
+        >
+          <svg id="menu-icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h11"></path>
+          </svg>
+          <svg id="menu-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" hidden>
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação Mobile -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="#inicio" data-nav-target="inicio">Início <span>01</span></a></li>
+      <li><a class="mobile-nav__link" href="#sobre" data-nav-target="sobre">Sobre &amp; Trajetória <span>02</span></a></li>
+      <li><a class="mobile-nav__link" href="#athletix" data-nav-target="projetos">Projetos · ATHLETIX <span>03</span></a></li>
+      <li><a class="mobile-nav__link" href="#tecnologias" data-nav-target="tecnologias">Tecnologias <span>04</span></a></li>
+      <li><a class="mobile-nav__link" href="#contato" data-nav-target="contato">Contato <span>05</span></a></li>
+    </ul>
+    <div class="mobile-nav__meta">
+      <span>Brasil · Português (pt-BR)</span>
+      <a href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">github.com/ytalo6411-art ↗</a>
+    </div>
+  </nav>
+
+  <main id="conteudo-principal">
+    <!-- =====================================================================
+         SEÇÃO 01 — HERO / APRESENTAÇÃO INICIAL
+         ===================================================================== -->
+    <section class="hero" id="inicio" data-section-group="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content" data-reveal>
+            <div class="hero__eyebrow">
+              <span class="hero__pulse" aria-hidden="true"></span>
+              <span>Portfólio Autoral · Brasil</span>
+              <span>·</span>
+              <span>HTML5 / CSS3 / JS ES6+</span>
+            </div>
+
+            <h1 class="hero__title" id="hero-title">YTALO LIMA</h1>
+            <p class="hero__role">Desenvolvedor de software em formação</p>
+
+            <p class="hero__manifesto">
+              &ldquo;Transformando curiosidade em tecnologia, ideias em sistemas e aprendizado em projetos reais.&rdquo;
+            </p>
+
+            <p class="hero__description">
+              Desenvolvo aplicações e experiências digitais, explorando programação, arquitetura de software, bancos de dados e tecnologias modernas.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#athletix">
+                <span>Conhecer o ATHLETIX</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8"></path>
+                </svg>
+              </a>
+              <a class="btn btn--secondary" href="#trajetoria">
+                <span>Minha trajetória</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 5v14M19 12l-7 7-7-7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <a
+              class="hero__github-link"
+              href="https://github.com/ytalo6411-art"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 21v-3.5a3.2 3.2 0 0 0-.9-2.5c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.3-3.5 4.6 4.6 0 0 0-.1-3.4s-1.1-.3-3.6 1.3a12.3 12.3 0 0 0-6.2 0C6.4 1.3 5.3 1.6 5.3 1.6a4.6 4.6 0 0 0-.1 3.4A5 5 0 0 0 3.9 8.5c0 5 3 6.2 6 6.5a3.2 3.2 0 0 0-.9 2.5V21"></path>
+                <path d="M9 18c-4 1.4-4-2-6-2"></path>
+              </svg>
+              <span>GitHub Oficial — github.com/ytalo6411-art</span>
+            </a>
+          </div>
+
+          <!-- Composição Visual Autoral (Arquitetura & Sistema Editorial — Sem rosto fictício) -->
+          <aside class="hero-construct" aria-label="Diagrama visual autoral de engenharia e sistemas" data-reveal>
+            <div class="hero-construct__bar">
+              <span>ARQUITETURA.SYS // 01</span>
+              <span>DOSSIÊ TÉCNICO</span>
+            </div>
+            <div class="hero-construct__canvas">
+              <svg class="hero-construct__svg" viewBox="0 0 460 320" role="img" aria-label="Construção geométrica abstrata representando camadas de interface, serviços de validação e banco de dados relacional">
+                <defs>
+                  <linearGradient id="constructAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C4F55A" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#9DE9CB" stop-opacity="0.75"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Moldura de coordenadas -->
+                <rect x="12" y="12" width="436" height="296" fill="none" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>
+                <line x1="12" y1="62" x2="448" y2="62" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+                <line x1="152" y1="12" x2="152" y2="308" stroke="currentColor" stroke-opacity="0.12" stroke-dasharray="4 4"/>
+
+                <!-- Cabeçalho interno -->
+                <rect x="26" y="30" width="10" height="10" style="fill: var(--accent-primary)"/>
+                <text x="46" y="39" fill="currentColor" fill-opacity="0.78" font-family="monospace" font-size="11" letter-spacing="1.5">SISTEMA EM CAMADAS · VERIFICÁVEL</text>
+                <text x="392" y="39" style="fill: var(--accent-alt)" font-family="monospace" font-weight="600" font-size="11">v2.0</text>
+
+                <!-- Camada 01: Interface -->
+                <g>
+                  <rect x="28" y="82" width="286" height="54" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.32" stroke-width="1.2"/>
+                  <rect x="28" y="82" width="4" height="54" style="fill: var(--accent-primary)"/>
+                  <text x="44" y="104" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">01 · INTERFACE &amp; EXPERIÊNCIA</text>
+                  <text x="44" y="122" fill="currentColor" fill-opacity="0.68" font-family="monospace" font-size="10.5">HTML5 · CSS3 · React 18 · Acessibilidade</text>
+                </g>
+
+                <!-- Camada 02: Regras & Validações -->
+                <g>
+                  <rect x="64" y="156" width="290" height="54" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.32" stroke-width="1.2"/>
+                  <rect x="64" y="156" width="4" height="54" style="fill: var(--accent-alt)"/>
+                  <text x="80" y="178" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">02 · LÓGICA, REGRAS &amp; CONTRATOS</text>
+                  <text x="80" y="196" fill="currentColor" fill-opacity="0.68" font-family="monospace" font-size="10.5">TypeScript · ES6+ · Zod · Testes</text>
+                </g>
+
+                <!-- Camada 03: Dados & Segurança -->
+                <g>
+                  <rect x="100" y="230" width="326" height="56" fill="currentColor" fill-opacity="0.06" style="stroke: var(--accent-primary)" stroke-opacity="0.8" stroke-width="1.3"/>
+                  <text x="116" y="253" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">03 · DADOS RELACIONAIS &amp; RLS</text>
+                  <text x="116" y="272" fill="currentColor" fill-opacity="0.72" font-family="monospace" font-size="10.5">PostgreSQL · Supabase Auth · RPC Transacional</text>
+                </g>
+
+                <!-- Conectores vetoriais -->
+                <path d="M314 109 H392 V230" fill="none" style="stroke: var(--accent-primary)" stroke-width="1.5"/>
+                <circle cx="392" cy="109" r="4" style="fill: var(--accent-primary)"/>
+                <circle cx="392" cy="183" r="4" style="fill: var(--accent-alt)"/>
+                <line x1="354" y1="183" x2="392" y2="183" style="stroke: var(--accent-alt)" stroke-width="1.4"/>
+                <circle cx="392" cy="230" r="4.5" style="fill: var(--accent-primary)"/>
+
+                <!-- Selo geométrico orbital -->
+                <circle cx="392" cy="109" r="24" fill="none" stroke="currentColor" stroke-opacity="0.22" stroke-dasharray="3 3"/>
+              </svg>
+            </div>
+            <div class="hero-construct__specs">
+              <div class="hero-construct__spec">
+                <span class="hero-construct__spec-label">Projeto Principal</span>
+                <span class="hero-construct__spec-value">ATHLETIX</span>
+              </div>
+              <div class="hero-construct__spec">
+                <span class="hero-construct__spec-label">Catálogo Semeado</span>
+                <span class="hero-construct__spec-value">317 Exercícios</span>
+              </div>
+              <div class="hero-construct__spec">
+                <span class="hero-construct__spec-label">Persistência</span>
+                <span class="hero-construct__spec-value">PostgreSQL + RLS</span>
+              </div>
+              <div class="hero-construct__spec">
+                <span class="hero-construct__spec-label">Idiomas da App</span>
+                <span class="hero-construct__spec-value">PT · EN · ES · FR</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="hero__footer">
+          <a class="scroll-cue" href="#sobre">
+            <span class="scroll-cue__line" aria-hidden="true"></span>
+            <span>Rolar para explorar o portfólio</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+          <span class="mono-tag">ÍNDICE EDITORIAL · 08 SEÇÕES</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 02 — SOBRE MIM
+         ===================================================================== -->
+    <section class="section" id="sobre" data-section-group="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">01 / Sobre mim</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="sobre-title">Curiosidade transformada em disciplina de construção.</h2>
+            <p class="section-lead">
+              Uma trajetória guiada pelo interesse genuíno em compreender como sistemas funcionam por dentro — e pelo hábito de aprender construindo software de verdade.
+            </p>
+          </div>
+        </header>
+
+        <div class="about-grid">
+          <!-- Ficha de Identificação Pessoal (Editável para revisão) -->
+          <!-- NOTA DE REVISÃO: Caso deseje inserir uma fotografia pessoal real futuramente,
+               substitua o bloco .dossier-card__monogram por <img src="assets/images/ytalo-lima.jpg" alt="Retrato de Ytalo Lima"> -->
+          <aside class="dossier-card" aria-label="Ficha de identificação do desenvolvedor" data-reveal>
+            <div class="dossier-card__monogram">
+              <div class="dossier-card__initials" aria-hidden="true">YL<span>.</span></div>
+              <div class="dossier-card__coord">
+                <div>IDENTIDADE VERIFICADA</div>
+                <div>BRASIL · UTC-3</div>
+                <div>DEV EM FORMAÇÃO</div>
+              </div>
+            </div>
+            <dl class="dossier-list">
+              <div class="dossier-list__item">
+                <dt class="dossier-list__term">Nome completo</dt>
+                <dd class="dossier-list__desc" data-editable-field="fullName">Ytalo Gabriel de Lima Silva</dd>
+              </div>
+              <div class="dossier-list__item">
+                <dt class="dossier-list__term">Assinatura profissional</dt>
+                <dd class="dossier-list__desc">Ytalo Lima</dd>
+              </div>
+              <div class="dossier-list__item">
+                <dt class="dossier-list__term">Atuação</dt>
+                <dd class="dossier-list__desc">Desenvolvimento de software</dd>
+              </div>
+              <div class="dossier-list__item">
+                <dt class="dossier-list__term">Perfil</dt>
+                <dd class="dossier-list__desc">Estudante e desenvolvedor de projetos independentes</dd>
+              </div>
+              <div class="dossier-list__item">
+                <dt class="dossier-list__term">Localização</dt>
+                <dd class="dossier-list__desc">Brasil</dd>
+              </div>
+            </dl>
+          </aside>
+
+          <!-- Narrativa Pessoal (Editável para revisão do autor) -->
+          <div class="about-prose" data-reveal>
+            <p class="about-prose__lead">
+              Meu interesse pela tecnologia começou pela curiosidade: observar páginas, aplicativos e ferramentas do dia a dia e querer entender o que acontecia por trás da interface.
+            </p>
+
+            <p>
+              Meus primeiros passos na programação aconteceram explorando <strong>plataformas gratuitas, documentações abertas e ferramentas acessíveis</strong> disponíveis na internet. Esse começo me ensinou autonomia: ler código com atenção, testar hipóteses no navegador ou no terminal, errar, investigar mensagens de erro e reconstruir cada parte com mais clareza.
+            </p>
+
+            <p>
+              Com o tempo, percebi que a melhor maneira de consolidar qualquer conceito técnico é colocá-lo à prova em projetos reais. Ao transitar por diferentes linguagens — como <strong>Java, Python, JavaScript, TypeScript, HTML e CSS</strong> — passei a enxergar além da sintaxe: comecei a me interessar por modelagem de banco de dados, validação de dados, segurança de acesso, testes automatizados e experiência de uso em telas reais.
+            </p>
+
+            <p>
+              Essa evolução ganhou forma concreta no desenvolvimento do <strong>ATHLETIX</strong>, onde pude conectar interface reativa, banco relacional PostgreSQL com políticas de segurança e fluxos completos de produto. Sigo estudando todos os dias com a vontade de evoluir continuamente como desenvolvedor de software, mantendo rigor técnico e mente aberta para aprender.
+            </p>
+
+            <blockquote class="family-note">
+              <span class="family-note__label">Base pessoal &amp; valores</span>
+              <p>
+                Ao longo de toda essa caminhada, <strong>minha família tem sido uma referência constante de incentivo, equilíbrio e presença</strong>. Ter esse apoio próximo dá sentido ao esforço diário nos estudos e reforça o compromisso de construir meu caminho na tecnologia com seriedade, humildade e constância.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 03 — TRAJETÓRIA & PROCESSO DE DESENVOLVIMENTO
+         ===================================================================== -->
+    <section class="section section--secondary" id="trajetoria" data-section-group="sobre" aria-labelledby="trajetoria-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">02 / Trajetória</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="trajetoria-title">Do primeiro código ao desenvolvimento de sistemas completos.</h2>
+            <p class="section-lead">
+              Cada etapa de aprendizado abriu espaço para resolver problemas mais estruturados — unindo fundamentos de lógica, web semântica, bancos relacionais e qualidade de software.
+            </p>
+          </div>
+        </header>
+
+        <div class="journey-layout">
+          <ol class="timeline" aria-label="Etapas da trajetória de aprendizado" data-reveal>
+            <li class="timeline__item">
+              <span class="timeline__step">Etapa 01 · Início</span>
+              <h3 class="timeline__heading">Descoberta em plataformas gratuitas</h3>
+              <p class="timeline__body">
+                Contato inicial com lógica computacional, algoritmos e estrutura da web utilizando conteúdos abertos, documentação técnica e ambientes gratuitos de estudo.
+              </p>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__step">Etapa 02 · Fundamentos</span>
+              <h3 class="timeline__heading">Exploração de múltiplas linguagens</h3>
+              <p class="timeline__body">
+                Prática com Java e Python para exercitar orientação a objetos, estruturas de controle e resolução de problemas, ao lado de HTML, CSS e JavaScript para interfaces interativas.
+              </p>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__step">Etapa 03 · Engenharia Web</span>
+              <h3 class="timeline__heading">Tipagem estática, versionamento e dados</h3>
+              <p class="timeline__body">
+                Adoção de Git e GitHub para controle de versão, TypeScript em modo estrito, componentização com React, contratos de validação com Zod e modelagem SQL em PostgreSQL.
+              </p>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__step">Etapa 04 · Produto Real</span>
+              <h3 class="timeline__heading">Construção e evolução do ATHLETIX</h3>
+              <p class="timeline__body">
+                Desenvolvimento de uma plataforma esportiva completa com 317 exercícios catalogados, motor determinístico de planos, diário nutricional, Row Level Security e testes automatizados.
+              </p>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__step">Etapa 05 · Continuidade</span>
+              <h3 class="timeline__heading">Aperfeiçoamento contínuo em engenharia</h3>
+              <p class="timeline__body">
+                Aprofundamento permanente em arquitetura de software, acessibilidade web, testes de integração, segurança de aplicações e clareza na documentação técnica.
+              </p>
+            </li>
+          </ol>
+
+          <div class="process-block" data-reveal>
+            <h3 class="process-block__title">Meu processo de desenvolvimento</h3>
+            <div class="process-grid">
+              <article class="process-card">
+                <span class="process-card__num">FASE 01</span>
+                <h4 class="process-card__title">Diagnóstico e Escopo</h4>
+                <p class="process-card__text">
+                  Levantamento claro do problema real, separando o que é regra essencial do produto do que depende de integrações externas.
+                </p>
+              </article>
+              <article class="process-card">
+                <span class="process-card__num">FASE 02</span>
+                <h4 class="process-card__title">Dados e Contratos</h4>
+                <p class="process-card__text">
+                  Modelagem de tabelas, políticas de acesso (RLS), schemas de validação e serviços previsíveis antes de acoplar telas complexas.
+                </p>
+              </article>
+              <article class="process-card">
+                <span class="process-card__num">FASE 03</span>
+                <h4 class="process-card__title">Interface e Acessibilidade</h4>
+                <p class="process-card__text">
+                  Construção responsiva de 320px ao desktop amplo, semântica HTML, navegação por teclado, estados vazios claros e contraste legível.
+                </p>
+              </article>
+              <article class="process-card">
+                <span class="process-card__num">FASE 04</span>
+                <h4 class="process-card__title">Testes e Verificação</h4>
+                <p class="process-card__text">
+                  Validação automatizada de regras de negócio, integridade do banco de dados, internacionalização e fluxos críticos no navegador.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 04 — PROJETO PRINCIPAL: ATHLETIX (ESTUDO DE CASO)
+         ===================================================================== -->
+    <section class="section section--case" id="athletix" data-section-group="projetos" aria-labelledby="athletix-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">03 / Projeto principal</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="athletix-title">ATHLETIX — Estudo de caso de engenharia de software.</h2>
+            <p class="section-lead">
+              Principal demonstração prática do portfólio: um produto digital completo que integra treinamento estruturado, nutrição rastreável, persistência transacional e segurança em nível de banco de dados.
+            </p>
+          </div>
+        </header>
+
+        <!-- Cabeçalho de Produto + Links Oficiais + Fatos Documentados -->
+        <article class="case-banner" data-reveal>
+          <div class="case-banner__top">
+            <span class="mono-tag mono-tag--accent">PRODUTO OFICIAL · ESTUDO DE CASO COMPLETO</span>
+            <span class="mono-tag">VERSÃO DOCUMENTADA: PROMAX V10</span>
+          </div>
+
+          <div class="case-banner__grid">
+            <div>
+              <h3 class="case-banner__name">ATHLETIX</h3>
+              <p class="case-banner__summary">
+                O ATHLETIX é uma plataforma esportiva que reúne planejamento de treinamento, biblioteca de exercícios, acompanhamento nutricional e evolução do atleta em um único ambiente digital.
+              </p>
+              <p class="case-banner__repo-note">
+                Nota técnica: o código-fonte oficial está hospedado no repositório de identificador <code>ytalo6411-art/marabras</code> no GitHub; <strong>ATHLETIX</strong> é o nome oficial e exclusivo do produto.
+              </p>
+            </div>
+
+            <div class="case-banner__actions">
+              <a
+                class="btn btn--primary"
+                href="https://athletix-lilac.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Abrir aplicação ATHLETIX</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8"></path>
+                </svg>
+              </a>
+              <a
+                class="btn btn--secondary"
+                href="https://github.com/ytalo6411-art/marabras"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Repositório no GitHub</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="facts-strip" aria-label="Dados técnicos documentados do ATHLETIX">
+            <div class="fact-item">
+              <div class="fact-item__value">317 exercícios</div>
+              <p class="fact-item__label">Catalogados com vídeos demonstrativos, thumbnails, instruções e nomes revisados em português.</p>
+            </div>
+            <div class="fact-item">
+              <div class="fact-item__value">4 idiomas</div>
+              <p class="fact-item__label">Interface em português (pt-BR), inglês, espanhol e francês com troca ao vivo e persistência.</p>
+            </div>
+            <div class="fact-item">
+              <div class="fact-item__value">PostgreSQL + RLS</div>
+              <p class="fact-item__label">Banco gerenciado via Supabase com Row Level Security em todas as tabelas e RPCs transacionais.</p>
+            </div>
+            <div class="fact-item">
+              <div class="fact-item__value">3 camadas de teste</div>
+              <p class="fact-item__label">Testes de unidade e integração (Vitest), banco isolado (PGlite) e fluxos reais em navegador (Playwright).</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Composição Grande: Mockup Desktop + Mockup Mobile -->
+        <div class="mockup-stage" data-reveal>
+          <figure class="device-frame">
+            <div class="device-frame__chrome" aria-hidden="true">
+              <span class="device-frame__dots"><span></span><span></span><span></span></span>
+              <span class="device-frame__url">athletix-lilac.vercel.app/app — Painel do Atleta (Desktop 1440px)</span>
+              <span>PT-BR</span>
+            </div>
+            <button
+              type="button"
+              class="device-frame__screen"
+              data-lightbox-index="1"
+              aria-label="Ampliar captura desktop do painel principal do ATHLETIX"
+            >
+              <img
+                src="assets/projects/athletix-dashboard-desktop.jpg"
+                alt="Tela real do painel principal do ATHLETIX exibindo objetivo de treino, próximo treino recomendado e divisão semanal ABC"
+                width="1440"
+                height="900"
+                loading="eager"
+              >
+              <span class="device-frame__zoom">Ampliar captura ↗</span>
+            </button>
+            <figcaption class="device-frame__caption">
+              <strong>Mockup Desktop · Interface real do código-fonte oficial:</strong> painel inicial do ATHLETIX com objetivo ativo, sequência semanal, indicação transparente de plano gerado por regras e atalho direto de sessão.
+            </figcaption>
+          </figure>
+
+          <figure class="device-frame device-frame--mobile">
+            <div class="device-frame__chrome" aria-hidden="true">
+              <span class="device-frame__dots"><span></span><span></span></span>
+              <span class="device-frame__url">Sessão Mobile · 390px</span>
+            </div>
+            <button
+              type="button"
+              class="device-frame__screen"
+              data-lightbox-index="6"
+              aria-label="Ampliar captura mobile da execução de treino do ATHLETIX"
+            >
+              <img
+                src="assets/projects/athletix-session-mobile.jpg"
+                alt="Tela mobile real da execução de sessão do ATHLETIX mostrando exercício atual, instruções, cronômetro de descanso e barra de navegação inferior"
+                width="780"
+                height="1688"
+                loading="lazy"
+              >
+              <span class="device-frame__zoom">Ampliar ↗</span>
+            </button>
+            <figcaption class="device-frame__caption">
+              <strong>Mockup Mobile (390px):</strong> execução de treino com cronômetro de descanso pausável e navegação inferior acessível (alvos ≥ 44px).
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Galeria Interativa de Capturas Reais da Aplicação -->
+        <div class="screens-block" data-reveal>
+          <div class="subhead">
+            <div>
+              <h3 class="subhead__title">Galeria de capturas reais da aplicação</h3>
+            </div>
+            <span class="subhead__meta">Clique em qualquer tela para visualização ampliada · 8 telas documentadas</span>
+          </div>
+
+          <div class="filter-bar" role="toolbar" aria-label="Filtrar capturas do ATHLETIX por módulo">
+            <button type="button" class="filter-chip" data-screen-filter="all" aria-pressed="true">Todas (8)</button>
+            <button type="button" class="filter-chip" data-screen-filter="acesso" aria-pressed="false">Acesso &amp; i18n</button>
+            <button type="button" class="filter-chip" data-screen-filter="treino" aria-pressed="false">Treino &amp; Catálogo</button>
+            <button type="button" class="filter-chip" data-screen-filter="nutricao" aria-pressed="false">Nutrição &amp; Evolução</button>
+            <button type="button" class="filter-chip" data-screen-filter="mobile" aria-pressed="false">Mobile (390px)</button>
+          </div>
+
+          <div class="screens-grid" id="athletix-screens-grid">
+            <!-- Captura 0 -->
+            <article class="screen-card" data-screen-category="acesso">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="0" aria-label="Ampliar tela de Login e Internacionalização do ATHLETIX">
+                <img src="assets/projects/athletix-login-desktop.jpg" alt="Tela real de login do ATHLETIX com seletor de idiomas PT, EN, ES e FR, botão Entrar com Google e formulário de e-mail e senha" width="1440" height="900" loading="lazy">
+                <span class="screen-card__badge">/app/login · Desktop</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Autenticação &amp; Seletor em 4 Idiomas</h4>
+                <p class="screen-card__desc">Rota pública real publicada na Vercel com suporte a pt-BR, en, es e fr, login por e-mail/senha e verificação preventiva do provedor Google OAuth.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 1 -->
+            <article class="screen-card" data-screen-category="treino">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="1" aria-label="Ampliar tela de Dashboard do ATHLETIX">
+                <img src="assets/projects/athletix-dashboard-desktop.jpg" alt="Painel principal do ATHLETIX com saudação, objetivo atual, faixa semanal e próximo treino recomendado" width="1440" height="900" loading="lazy">
+                <span class="screen-card__badge">/app · Desktop</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Dashboard e Próxima Sessão</h4>
+                <p class="screen-card__desc">Visão consolidada da meta semanal, dias ativos, recomendação automática do próximo treino da divisão e acesso rápido ao treinador.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 2 -->
+            <article class="screen-card" data-screen-category="treino">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="2" aria-label="Ampliar tela da Biblioteca de Exercícios do ATHLETIX">
+                <img src="assets/projects/athletix-exercises-desktop.jpg" alt="Biblioteca de exercícios do ATHLETIX com busca com debounce, filtros de grupo muscular, equipamento e dificuldade" width="1440" height="900" loading="lazy">
+                <span class="screen-card__badge">/app/exercises · Catálogo</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Biblioteca de 317 Exercícios</h4>
+                <p class="screen-card__desc">Busca textual com debounce, filtros combinados de músculo, equipamento e nível, nomes revisados em pt-BR e carregamento de vídeo sob demanda.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 3 -->
+            <article class="screen-card" data-screen-category="treino">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="3" aria-label="Ampliar tela de Planos de Treino do ATHLETIX">
+                <img src="assets/projects/athletix-workouts-desktop.jpg" alt="Tela de treinos do ATHLETIX exibindo programa semanal ABC gerado por regras com lista real de exercícios, séries e repetições" width="1440" height="900" loading="lazy">
+                <span class="screen-card__badge">/app/workouts · Planos</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Gerador de Planos e Divisão Semanal</h4>
+                <p class="screen-card__desc">Programa agrupado por <code>program_id</code> listando exercícios reais, séries, repetições, justificativa técnica e abas de Modelos e Histórico editável.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 4 -->
+            <article class="screen-card" data-screen-category="nutricao">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="4" aria-label="Ampliar tela de Nutrição do ATHLETIX">
+                <img src="assets/projects/athletix-nutrition-desktop.jpg" alt="Módulo de nutrição do ATHLETIX com sugestões de refeições ilustradas, porções claras e abas de diário alimentar e preferências" width="1440" height="900" loading="lazy">
+                <span class="screen-card__badge">/app/nutrition · Nutrição</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Nutrição Visual, Diário e Hidratação</h4>
+                <p class="screen-card__desc">Montagem de pratos com porções e substituições, separação estrita entre sugestão e consumo registrado, busca em múltiplas fontes e hidratação.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 5 -->
+            <article class="screen-card" data-screen-category="nutricao">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="5" aria-label="Ampliar tela de Evolução do Atleta do ATHLETIX">
+                <img src="assets/projects/athletix-progress-desktop.jpg" alt="Tela de evolução do ATHLETIX com gráfico vetorial SVG de volume por sessão, barras de frequência semanal e comparativo de 30 dias" width="1440" height="900" loading="lazy">
+                <span class="screen-card__badge">/app/progress · Gráficos SVG</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Evolução, Gráficos SVG e Recordes</h4>
+                <p class="screen-card__desc">Gráfico de volume em SVG nativo (sem dependências pesadas de gráficos), consistência semanal, medidas corporais e comparativo entre períodos.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 6 -->
+            <article class="screen-card" data-screen-category="mobile">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="6" aria-label="Ampliar tela mobile de Execução de Sessão do ATHLETIX">
+                <img src="assets/projects/athletix-session-mobile.jpg" alt="Execução de treino mobile em 390px no ATHLETIX com instruções, cronômetro de descanso e séries persistidas" width="780" height="1688" loading="lazy">
+                <span class="screen-card__badge">/app/session · Mobile 390px</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Execução de Sessão e Cronômetro</h4>
+                <p class="screen-card__desc">Séries salvas no banco (sobrevivem a reload), cronômetro de descanso com pausa/pular e encerramento atômico somente após série válida.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+
+            <!-- Captura 7 -->
+            <article class="screen-card" data-screen-category="mobile">
+              <button type="button" class="screen-card__trigger" data-lightbox-index="7" aria-label="Ampliar tela mobile do Painel Inicial do ATHLETIX">
+                <img src="assets/projects/athletix-dashboard-mobile.jpg" alt="Versão mobile em 390px do painel do ATHLETIX com barra de navegação inferior de cinco destinos" width="780" height="1688" loading="lazy">
+                <span class="screen-card__badge">/app · Mobile 390px</span>
+              </button>
+              <div class="screen-card__body">
+                <h4 class="screen-card__title">Shell Mobile sem Overflow Horizontal</h4>
+                <p class="screen-card__desc">Adaptação para telas estreitas testada desde 320px, com barra inferior de 5 destinos, safe-area e leitura hierárquica limpa.</p>
+                <span class="screen-card__action">Inspecionar tela ↗</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- As 18 Funcionalidades Documentadas do ATHLETIX -->
+        <div data-reveal>
+          <div class="subhead">
+            <div>
+              <h3 class="subhead__title">18 funcionalidades documentadas e verificadas</h3>
+            </div>
+            <span class="subhead__meta">Mapeamento fiel ao código e ao relatório PROMAX V10</span>
+          </div>
+
+          <div class="filter-bar" role="toolbar" aria-label="Filtrar as 18 funcionalidades do ATHLETIX">
+            <button type="button" class="filter-chip" data-feature-filter="all" aria-pressed="true">Todas (18)</button>
+            <button type="button" class="filter-chip" data-feature-filter="treinamento" aria-pressed="false">Treinamento (9)</button>
+            <button type="button" class="filter-chip" data-feature-filter="nutricao-evolucao" aria-pressed="false">Nutrição &amp; Evolução (5)</button>
+            <button type="button" class="filter-chip" data-feature-filter="plataforma" aria-pressed="false">Plataforma &amp; Segurança (4)</button>
+          </div>
+
+          <div class="features-matrix" id="athletix-features-matrix">
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>01 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Biblioteca de exercícios</h4>
+              <p class="feature-cell__detail">Catálogo com 317 exercícios semeados no PostgreSQL, instruções passo a passo, respiração, erros comuns e nomes revisados em pt-BR.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>02 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Vídeos demonstrativos</h4>
+              <p class="feature-cell__detail">Demonstrações reais com atribuição de licença MIT e carregamento sob demanda apenas após clique, preservando banda e performance.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>03 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Busca e filtros</h4>
+              <p class="feature-cell__detail">Pesquisa textual com debounce de 350ms combinada a filtros por grupo muscular, equipamento disponível, dificuldade e paginação.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>04 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Questionário de personalização</h4>
+              <p class="feature-cell__detail">Fluxo guiado de 7 etapas validado com Zod, coletando objetivos, ambiente, equipamentos, tempo por sessão e limitações de movimento.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>05 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Gerador de planos de treino</h4>
+              <p class="feature-cell__detail">Motor determinístico baseado em padrões biomecânicos (empurrar, puxar, agachar, dobrar, core), divisões semanais e justificativa por dia.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>06 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Montagem de rotinas</h4>
+              <p class="feature-cell__detail">Construtor manual e edição de programas com definição de séries, repetições, carga, descanso, substituição individual e regeneração de dia.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>07 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Execução de sessões</h4>
+              <p class="feature-cell__detail">Snapshot dos exercícios da sessão, persistência de séries no banco, retomada fiel após recarregar a página e conclusão via RPC transacional.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>08 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Cronômetro de descanso</h4>
+              <p class="feature-cell__detail">Temporizador integrado à sessão com cálculo por prazo absoluto, controles de pausar, retomar ou pular descanso entre séries.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="treinamento">
+              <div class="feature-cell__top"><span>09 / 18</span><span class="feature-cell__domain">TREINAMENTO</span></div>
+              <h4 class="feature-cell__name">Histórico de treinamento</h4>
+              <p class="feature-cell__detail">Registro cronológico das sessões concluídas (iniciar não marca conclusão vazia), edição de observações e exclusão com confirmação.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="nutricao-evolucao">
+              <div class="feature-cell__top"><span>10 / 18</span><span class="feature-cell__domain">NUTRIÇÃO</span></div>
+              <h4 class="feature-cell__name">Diário nutricional</h4>
+              <p class="feature-cell__detail">Registro alimentar por data em seis refeições, receitas ilustradas com porções e equivalências, somando macronutrientes apenas do consumo efetivo.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="nutricao-evolucao">
+              <div class="feature-cell__top"><span>11 / 18</span><span class="feature-cell__domain">NUTRIÇÃO</span></div>
+              <h4 class="feature-cell__name">Acompanhamento de hidratação</h4>
+              <p class="feature-cell__detail">Registro diário de ingestão de água em mililitros comparado à meta configurada nas preferências individuais do atleta.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="nutricao-evolucao">
+              <div class="feature-cell__top"><span>12 / 18</span><span class="feature-cell__domain">NUTRIÇÃO</span></div>
+              <h4 class="feature-cell__name">Pesquisa de alimentos</h4>
+              <p class="feature-cell__detail">Consulta em cascata (catálogo local, Open Food Facts e USDA FoodData Central), código de barras opcional e cadastro manual pelo rótulo com fonte visível.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="nutricao-evolucao">
+              <div class="feature-cell__top"><span>13 / 18</span><span class="feature-cell__domain">EVOLUÇÃO</span></div>
+              <h4 class="feature-cell__name">Evolução do atleta</h4>
+              <p class="feature-cell__detail">Acompanhamento longitudinal de medidas corporais, frequência semanal e janela comparativa entre os últimos 30 dias e o período anterior.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="nutricao-evolucao">
+              <div class="feature-cell__top"><span>14 / 18</span><span class="feature-cell__domain">EVOLUÇÃO</span></div>
+              <h4 class="feature-cell__name">Gráficos e recordes</h4>
+              <p class="feature-cell__detail">Gráficos vetoriais SVG construídos sem bibliotecas externas e apuração automática de recordes pessoais (PRs) ao encerrar sessões.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="plataforma">
+              <div class="feature-cell__top"><span>15 / 18</span><span class="feature-cell__domain">PLATAFORMA</span></div>
+              <h4 class="feature-cell__name">Painel administrativo</h4>
+              <p class="feature-cell__detail">Visão administrativa, catálogo e trilha de auditoria protegidos no banco pela função <code>public.is_admin()</code> e políticas RLS restritas.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="plataforma">
+              <div class="feature-cell__top"><span>16 / 18</span><span class="feature-cell__domain">SEGURANÇA</span></div>
+              <h4 class="feature-cell__name">Autenticação</h4>
+              <p class="feature-cell__detail">Supabase Auth real (sem login simulado em localStorage), sessão persistente com rotação de token, recuperação de senha e estrutura PKCE para Google OAuth.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="plataforma">
+              <div class="feature-cell__top"><span>17 / 18</span><span class="feature-cell__domain">INTERNACIONALIZAÇÃO</span></div>
+              <h4 class="feature-cell__name">Internacionalização</h4>
+              <p class="feature-cell__detail">Dicionários centralizados para pt-BR, en, es e fr cobrindo a interface, com persistência de idioma e identificação transparente de textos externos.</p>
+            </article>
+
+            <article class="feature-cell" data-feature-domain="plataforma">
+              <div class="feature-cell__top"><span>18 / 18</span><span class="feature-cell__domain">EXPERIÊNCIA</span></div>
+              <h4 class="feature-cell__name">PWA instalável</h4>
+              <p class="feature-cell__detail">Manifesto web, ícones dedicados, Service Worker com precache otimizado e página de contingência offline via <code>vite-plugin-pwa</code>.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 05 — ARQUITETURA E DESENVOLVIMENTO DO ATHLETIX
+         ===================================================================== -->
+    <section class="section section--secondary" id="arquitetura" data-section-group="projetos" aria-labelledby="arquitetura-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">04 / Arquitetura e desenvolvimento</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="arquitetura-title">Decisões técnicas, fluxo de dados e rigor de engenharia.</h2>
+            <p class="section-lead">
+              Como o ATHLETIX foi planejado, organizado e endurecido contra falhas silenciosas, inconsistências de sessão e vazamentos de permissão.
+            </p>
+          </div>
+        </header>
+
+        <div class="stack-notice" data-reveal>
+          <span>
+            <strong>Distinção importante de stacks:</strong> este portfólio pessoal foi construído inteiramente com <strong>HTML5, CSS3 e JavaScript ES6+ puros</strong>. A arquitetura abaixo documenta especificamente a engenharia interna da aplicação <strong>ATHLETIX</strong>.
+          </span>
+          <span class="mono-tag mono-tag--alt">STACK DO PRODUTO ≠ STACK DO PORTFÓLIO</span>
+        </div>
+
+        <div class="arch-layout">
+          <!-- Diagrama Visual Simplificado + Integrações Externas Separadas -->
+          <div class="arch-diagram" aria-label="Diagrama de arquitetura do ATHLETIX" data-reveal>
+            <div class="arch-diagram__header">Fluxo Principal da Arquitetura · ATHLETIX</div>
+
+            <div class="arch-flow">
+              <div class="arch-node">
+                <span class="arch-node__name">USUÁRIO</span>
+                <span class="arch-node__meta">Desktop · Mobile · PWA Instalável</span>
+              </div>
+              <div class="arch-arrow" aria-hidden="true">↓</div>
+
+              <div class="arch-node">
+                <span class="arch-node__name">INTERFACE REACT</span>
+                <span class="arch-node__meta">React 18 · TypeScript · Vite 6 · Zustand</span>
+              </div>
+              <div class="arch-arrow" aria-hidden="true">↓</div>
+
+              <div class="arch-node">
+                <span class="arch-node__name">SERVIÇOS E VALIDAÇÕES</span>
+                <span class="arch-node__meta">Motor Determinístico · Schemas Zod · i18n</span>
+              </div>
+              <div class="arch-arrow" aria-hidden="true">↓</div>
+
+              <div class="arch-node arch-node--accent">
+                <span class="arch-node__name">SUPABASE</span>
+                <span class="arch-node__meta">Supabase Auth · Row Level Security · RPCs</span>
+              </div>
+              <div class="arch-arrow" aria-hidden="true">↓</div>
+
+              <div class="arch-node arch-node--accent">
+                <span class="arch-node__name">POSTGRESQL</span>
+                <span class="arch-node__meta">Tabelas Relacionais · Transações Atômicas</span>
+              </div>
+            </div>
+
+            <!-- Integrações Externas Representadas Separadamente -->
+            <div class="arch-external">
+              <div class="arch-external__title">Integrações Externas e Serverless (Isoladas do Fluxo Canônico)</div>
+              <div class="arch-external__grid">
+                <div class="arch-ext-item">
+                  <strong>Free Exercise DB &amp; wger</strong>
+                  <span>Vídeos demonstrativos sob demanda e catálogo complementar com fallback local.</span>
+                </div>
+                <div class="arch-ext-item">
+                  <strong>Open Food Facts &amp; USDA</strong>
+                  <span>Consulta nutricional externa com timeout, cascata e identificação de origem.</span>
+                </div>
+                <div class="arch-ext-item">
+                  <strong>Vercel Functions (/api/ai/*)</strong>
+                  <span>Camada serverless opcional; valida JWT, cota e contrato Zod sem expor chaves no browser.</span>
+                </div>
+                <div class="arch-ext-item">
+                  <strong>Google OAuth (Externo)</strong>
+                  <span>Fluxo PKCE preparado via Supabase Auth, sujeito à habilitação de credenciais externas.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stack Tecnológica do ATHLETIX por Camada -->
+          <div class="arch-stack-groups" data-reveal>
+            <div class="arch-stack-box">
+              <h3 class="arch-stack-box__title">Frontend da Aplicação</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">React 18</span>
+                <span class="mono-tag">TypeScript (strict)</span>
+                <span class="mono-tag">Vite 6</span>
+                <span class="mono-tag">Zustand</span>
+                <span class="mono-tag">React Router</span>
+              </div>
+            </div>
+
+            <div class="arch-stack-box">
+              <h3 class="arch-stack-box__title">Backend, Segurança e Dados</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">Supabase</span>
+                <span class="mono-tag">PostgreSQL</span>
+                <span class="mono-tag">Supabase Auth</span>
+                <span class="mono-tag">Row Level Security (RLS)</span>
+                <span class="mono-tag">Vercel Functions</span>
+              </div>
+            </div>
+
+            <div class="arch-stack-box">
+              <h3 class="arch-stack-box__title">Validação de Contratos</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">Zod</span>
+                <span class="mono-tag">Catálogo Fechado por UUID</span>
+              </div>
+            </div>
+
+            <div class="arch-stack-box">
+              <h3 class="arch-stack-box__title">Testes Automatizados</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">Vitest</span>
+                <span class="mono-tag">Playwright</span>
+                <span class="mono-tag">PGlite (SQL/RLS em memória)</span>
+                <span class="mono-tag">Testing Library</span>
+              </div>
+            </div>
+
+            <div class="arch-stack-box">
+              <h3 class="arch-stack-box__title">Outros Recursos Integrados</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">PWA Instalável</span>
+                <span class="mono-tag">APIs Externas com Timeout</span>
+                <span class="mono-tag">Integrações Nutricionais</span>
+                <span class="mono-tag">i18n (pt-BR, en, es, fr)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- História Técnica do Projeto (9 Decisões de Engenharia) -->
+        <div class="subhead" data-reveal>
+          <div>
+            <h3 class="subhead__title">História técnica e decisões de implementação</h3>
+          </div>
+          <span class="subhead__meta">9 frentes de engenharia documentadas</span>
+        </div>
+
+        <div class="pillars-grid" data-reveal>
+          <article class="pillar-card">
+            <span class="pillar-card__index">01 · PLANEJAMENTO</span>
+            <h4 class="pillar-card__title">Diagnóstico antes da refatoração</h4>
+            <p class="pillar-card__text">Cada problema funcional ou de segurança foi reproduzido e inventariado antes de alterar código, preservando dados existentes com migrações SQL estritamente aditivas.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">02 · ARQUITETURA</span>
+            <h4 class="pillar-card__title">Motor determinístico independente</h4>
+            <p class="pillar-card__text">A geração de treinos funciona por regras biomecânicas auditáveis e validação Zod sobre IDs reais do catálogo, sem depender de IA externa para entregar valor.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">03 · ORGANIZAÇÃO DO CÓDIGO</span>
+            <h4 class="pillar-card__title">Separação clara de responsabilidades</h4>
+            <p class="pillar-card__text">Estrutura modular dividida entre páginas (<code>src/pages</code>), serviços de domínio (<code>src/services</code>), taxonomia/catálogos (<code>src/data</code>), i18n, endpoints <code>api/</code> e migrações <code>supabase/</code>.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">04 · BANCO DE DADOS</span>
+            <h4 class="pillar-card__title">Atomicidade e integridade relacional</h4>
+            <p class="pillar-card__text">Conclusão de treino exige série válida salva e executa RPC transacional idempotente que atualiza histórico e recordes pessoais sem duplicatas.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">05 · AUTENTICAÇÃO</span>
+            <h4 class="pillar-card__title">Sessão real e proteção de rotas</h4>
+            <p class="pillar-card__text">Uso exclusivo de Supabase Auth com guardas <code>RequireAuth</code> e <code>RequireAdmin</code>; rascunhos sensíveis ficam restritos a <code>sessionStorage</code> e são limpos no logout.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">06 · SEGURANÇA</span>
+            <h4 class="pillar-card__title">RLS own-only e endurecimento AppSec</h4>
+            <p class="pillar-card__text">Políticas por usuário (<code>auth.uid()</code>), privilégios mínimos por coluna, remoção de extensões de rede desnecessárias no banco, cabeçalhos CSP e zero chaves secretas no cliente.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">07 · TESTES AUTOMATIZADOS</span>
+            <h4 class="pillar-card__title">Unidade, banco real em PGlite e E2E</h4>
+            <p class="pillar-card__text">Suíte cobrindo taxonomia, gerador de planos, isolamento entre dois usuários em PostgreSQL isolado (PGlite), cobertura de tradução e fluxos críticos no Chromium.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">08 · RESPONSIVIDADE</span>
+            <h4 class="pillar-card__title">De 320px ao desktop sem overflow</h4>
+            <p class="pillar-card__text">Verificação automatizada de ausência de rolagem horizontal em múltiplas larguras, diálogos acessíveis com captura de foco e barra móvel com alvos de toque mínimos de 44px.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-card__index">09 · PERFORMANCE</span>
+            <h4 class="pillar-card__title">Carregamento sob demanda e PWA</h4>
+            <p class="pillar-card__text">Rotas divididas com <code>lazy/Suspense</code>, vídeos externos carregados apenas ao clicar, timeouts em chamadas HTTP externas e gráficos leves desenhados em SVG puro.</p>
+          </article>
+        </div>
+
+        <!-- Limitações e Dependências Externas (Comunicação Obrigatória e Transparente) -->
+        <aside class="limits-panel" aria-labelledby="limits-title" data-reveal>
+          <div class="limits-panel__head">
+            <span class="limits-panel__eyebrow">Transparência de Engenharia · Estado de Configuração Externa</span>
+            <h3 class="limits-panel__title" id="limits-title">Funcionalidades preparadas no código que dependem de credenciais externas</h3>
+          </div>
+          <div class="limits-grid">
+            <div class="limit-item">
+              <h4>1. Login com Google OAuth</h4>
+              <p>
+                Toda a integração PKCE, tratamento de callback e checagem preventiva de disponibilidade (<code>/auth/v1/settings</code>) estão prontos no código, mas a ativação depende de credenciais externas (Client ID e Secret no Google Cloud + habilitação no painel do Supabase).
+              </p>
+            </div>
+            <div class="limit-item">
+              <h4>2. Assistente de IA Opcional</h4>
+              <p>
+                Os endpoints serverless (<code>/api/ai/*</code>) e a validação de contrato estão implementados, porém o recurso é opcional e requer configuração de provedor e chave (<code>AI_API_KEY</code>) no servidor. Sem ela, o sistema informa claramente e opera pelo motor determinístico de regras.
+              </p>
+            </div>
+            <div class="limit-item">
+              <h4>3. Envio Transacional de E-mails</h4>
+              <p>
+                Fluxos de confirmação de cadastro e recuperação de senha estão integrados ao Supabase Auth, mas o disparo confiável de e-mails sem restrições severas de cota depende da configuração externa de um servidor SMTP próprio.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 06 — TECNOLOGIAS E CONHECIMENTOS
+         ===================================================================== -->
+    <section class="section" id="tecnologias" data-section-group="tecnologias" aria-labelledby="tecnologias-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">05 / Tecnologias</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="tecnologias-title">Linguagens, ferramentas e ecossistema de desenvolvimento.</h2>
+            <p class="section-lead">
+              Apresentação objetiva do repertório técnico — sem barras percentuais arbitrárias — diferenciando claramente tecnologias com aplicação comprovada em projeto das que estão em estudo e prática de programação.
+            </p>
+          </div>
+        </header>
+
+        <div class="filter-bar" role="toolbar" aria-label="Filtrar tecnologias por tipo de experiência" data-reveal>
+          <button type="button" class="filter-chip" data-tech-filter="all" aria-pressed="true">Todas as tecnologias</button>
+          <button type="button" class="filter-chip" data-tech-filter="applied" aria-pressed="false">Aplicação comprovada (ATHLETIX / Portfólio)</button>
+          <button type="button" class="filter-chip" data-tech-filter="study" aria-pressed="false">Em estudo e prática</button>
+        </div>
+
+        <div class="tech-groups" id="tech-groups">
+          <!-- Grupo 1: Linguagens -->
+          <div class="tech-group" data-reveal>
+            <div class="tech-group__header">
+              <h3 class="tech-group__title">Linguagens</h3>
+              <span class="tech-group__sub">Base lógica, marcação, estilização e tipagem</span>
+            </div>
+            <div class="tech-cards">
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/javascript.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">JavaScript (ES6+)</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Manipulação acessível de DOM, eventos, estado, validação no cliente neste portfólio e scripts de automação em Node.js.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/typescript.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">TypeScript</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Tipagem estrita (<code>strict</code> e <code>noUncheckedIndexedAccess</code>) em toda a interface, serviços de domínio e funções serverless do ATHLETIX.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/html5.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">HTML</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Estruturação semântica com landmarks, hierarquia correta de títulos, diálogos nativos, formulários acessíveis e metadados SEO.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/css3.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">CSS</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Sistemas de tokens via Custom Properties, Grid/Flexbox responsivos, temas claro e escuro e respeito a <code>prefers-reduced-motion</code>.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="study">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/java.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Java</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--study">Estudo e prática</span>
+                </div>
+                <p class="tech-card__desc">Estudo de programação orientada a objetos, tipagem forte, classes, coleções e resolução estruturada de exercícios e algoritmos.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="study">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/python.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Python</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--study">Estudo e prática</span>
+                </div>
+                <p class="tech-card__desc">Prática de lógica computacional, automação de rotinas simples, manipulação de dados e clareza na escrita de algoritmos.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Grupo 2: Front-end -->
+          <div class="tech-group" data-reveal>
+            <div class="tech-group__header">
+              <h3 class="tech-group__title">Front-end</h3>
+              <span class="tech-group__sub">Interfaces de produto, estado e empacotamento</span>
+            </div>
+            <div class="tech-cards">
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/react.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">React</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Construção das rotas autenticadas e públicas, hooks customizados, divisão de código com Suspense e provedor global de tema e idioma.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/vite.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Vite</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Ambiente rápido de desenvolvimento e build otimizado de produção integrado à geração de manifesto PWA e Service Worker.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/zustand.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Zustand &amp; PWA</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Gerenciamento enxuto do estado de autenticação/perfil e instalação como Progressive Web App com suporte offline.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Grupo 3: Backend -->
+          <div class="tech-group" data-reveal>
+            <div class="tech-group__header">
+              <h3 class="tech-group__title">Backend</h3>
+              <span class="tech-group__sub">Autenticação, funções serverless, scripts e validação</span>
+            </div>
+            <div class="tech-cards">
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/supabase.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Supabase</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Autenticação JWT/PKCE, API REST gerada sobre o schema, Storage privado de avatares e execução segura de RPCs.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/nodejs.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Node.js</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Execução das Vercel Functions (<code>api/ai/*</code>) e scripts de seed, verificação de variáveis, extração de i18n e auditoria de banco.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/zod.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Zod</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Validação rigorosa de entradas do questionário, contratos de planos de treino e verificação de respostas em fronteiras de API.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Grupo 4: Banco de dados -->
+          <div class="tech-group" data-reveal>
+            <div class="tech-group__header">
+              <h3 class="tech-group__title">Banco de dados</h3>
+              <span class="tech-group__sub">Modelagem relacional, migrações e isolamento por usuário</span>
+            </div>
+            <div class="tech-cards">
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/postgresql.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">PostgreSQL</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Mais de 23 tabelas relacionais, índices únicos contra duplicidade, triggers de auditoria, views seguras e funções PL/pgSQL transacionais.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/rls-shield.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Row Level Security (RLS)</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Isolamento de dados por linha (<code>auth.uid()</code>), privilégios mínimos por coluna e separação estrita entre leitura pública e escrita do proprietário.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Grupo 5: Ferramentas -->
+          <div class="tech-group" data-reveal>
+            <div class="tech-group__header">
+              <h3 class="tech-group__title">Ferramentas</h3>
+              <span class="tech-group__sub">Controle de versão, integração contínua e publicação</span>
+            </div>
+            <div class="tech-cards">
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/git.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Git</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Versionamento organizado em branches, histórico rastreável de entregas e verificação limpa de alterações.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/github.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">GitHub</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Hospedagem de repositórios, documentação técnica em Markdown, Pull Requests e pipelines de verificação no GitHub Actions.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/vercel.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Vercel</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Publicação contínua com rewrites SPA, cabeçalhos de segurança HTTP (CSP, HSTS, X-Frame-Options) e funções serverless.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Grupo 6: Testes e qualidade -->
+          <div class="tech-group" data-reveal>
+            <div class="tech-group__header">
+              <h3 class="tech-group__title">Testes e qualidade</h3>
+              <span class="tech-group__sub">Automação de testes unitários, banco de dados e navegador</span>
+            </div>
+            <div class="tech-cards">
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/vitest.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Vitest</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Testes rápidos de unidade e integração para o gerador de treinos, taxonomia de exercícios, autenticação e fronteiras de segurança.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/playwright.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">Playwright</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Testes ponta a ponta em Chromium verificando idiomas, persistência de séries, ausência de overflow de 320px a 1440px e temas.</p>
+              </article>
+
+              <article class="tech-card" data-tech-kind="applied">
+                <div class="tech-card__head">
+                  <div class="tech-card__identity">
+                    <img class="tech-card__icon" src="assets/icons/pglite.svg" alt="" width="34" height="34" loading="lazy">
+                    <h4 class="tech-card__name">PGlite</h4>
+                  </div>
+                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                </div>
+                <p class="tech-card__desc">Execução real das migrações PostgreSQL em ambiente isolado para testar políticas RLS, transações e bloqueio de acesso cruzado entre contas.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 07 — OUTROS PROJETOS (ESTRUTURA EXTENSÍVEL)
+         ===================================================================== -->
+    <section class="section section--secondary" id="projetos" data-section-group="projetos" aria-labelledby="projetos-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">06 / Acervo de projetos</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="projetos-title">Projetos publicados e estrutura para novos capítulos.</h2>
+            <p class="section-lead">
+              O acervo abaixo é alimentado por uma estrutura de dados modular em JavaScript (<code>PROJECTS_DATA</code>). Novos projetos são incluídos apenas quando possuem código, escopo e entrega devidamente verificados.
+            </p>
+          </div>
+        </header>
+
+        <div class="projects-archive" id="projects-archive" data-reveal>
+          <!-- Renderizado inicialmente em HTML semântico e sincronizado por PROJECTS_DATA em script.js -->
+          <article class="project-featured">
+            <div class="project-featured__media">
+              <img
+                src="assets/projects/athletix-workouts-desktop.jpg"
+                alt="Tela do programa semanal de treinos do ATHLETIX"
+                width="1440"
+                height="900"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-featured__content">
+              <span class="project-featured__status">01 · PROJETO PRINCIPAL · PUBLICADO</span>
+              <h3 class="project-featured__title">ATHLETIX</h3>
+              <p class="project-featured__desc">
+                Plataforma esportiva completa com biblioteca de 317 exercícios em vídeo, questionário de personalização, gerador determinístico de planos, execução de sessões com cronômetro, diário nutricional e gráficos de evolução.
+              </p>
+              <div class="project-featured__tags">
+                <span class="mono-tag">React 18</span>
+                <span class="mono-tag">TypeScript</span>
+                <span class="mono-tag">Vite 6</span>
+                <span class="mono-tag">Supabase</span>
+                <span class="mono-tag">PostgreSQL + RLS</span>
+                <span class="mono-tag">PWA</span>
+              </div>
+              <div class="project-featured__links">
+                <a class="btn btn--primary btn--sm" href="https://athletix-lilac.vercel.app" target="_blank" rel="noopener noreferrer">Aplicação publicada ↗</a>
+                <a class="btn btn--secondary btn--sm" href="https://github.com/ytalo6411-art/marabras" target="_blank" rel="noopener noreferrer">GitHub (repo marabras) ↗</a>
+                <a class="btn btn--ghost btn--sm" href="#athletix">Revisitar estudo de caso ↑</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="future-slot">
+            <div class="future-slot__head">
+              <div>
+                <span class="mono-tag">ESTRUTURA EXTENSÍVEL PRONTA</span>
+                <h3 class="future-slot__title" style="margin-top: 0.5rem;">Espaço reservado para próximos projetos reais</h3>
+              </div>
+              <button
+                type="button"
+                class="btn btn--ghost btn--sm"
+                id="toggle-schema-btn"
+                aria-expanded="false"
+                aria-controls="projects-schema-box"
+              >
+                Ver modelo de dados JS
+              </button>
+            </div>
+            <p class="future-slot__text">
+              Para manter total fidelidade acadêmica e profissional, projetos em rascunho não recebem descrições ou telas fictícias. Assim que um novo projeto atingir estado documentado, basta adicionar um objeto ao array <code>PROJECTS_DATA</code> em <code>script.js</code> contendo imagem, nome, descrição, tecnologias, link publicado, link GitHub e situação.
+            </p>
+            <pre class="schema-preview" id="projects-schema-box" hidden><code>// Estrutura pronta em script.js para inclusão imediata de novos projetos:
+{
+  id: 'novo-projeto',
+  featured: false,
+  image: 'assets/projects/captura-real.jpg',
+  imageAlt: 'Descrição acessível da tela real do projeto',
+  name: 'Nome Oficial do Projeto',
+  description: 'Descrição objetiva do problema resolvido e das funcionalidades.',
+  technologies: ['HTML5', 'CSS3', 'JavaScript', 'PostgreSQL'],
+  liveUrl: 'https://endereco-publicado.vercel.app',
+  githubUrl: 'https://github.com/ytalo6411-art/nome-do-repositorio',
+  status: 'Em desenvolvimento | Publicado'
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SEÇÃO 08 — CONTATO
+         ===================================================================== -->
+    <section class="section" id="contato" data-section-group="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div>
+            <span class="section-index">07 / Contato</span>
+          </div>
+          <div>
+            <h2 class="section-title" id="contato-title">Canais abertos para conversas, feedback técnico e oportunidades.</h2>
+            <p class="section-lead">
+              Entre em contato diretamente por e-mail, acompanhe meus repositórios públicos no GitHub ou utilize o validador de mensagem ao lado.
+            </p>
+          </div>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Canais Diretos -->
+          <div class="contact-channels" data-reveal>
+            <!-- E-mail Profissional (Editável em DEVELOPER_CONFIG no script.js) -->
+            <div class="channel-card">
+              <span class="channel-card__label">E-mail profissional</span>
+              <p class="channel-card__value" id="developer-email-display">ytalo6411@gmail.com</p>
+              <div class="channel-card__actions">
+                <button type="button" class="btn btn--primary btn--sm" id="copy-email-btn">
+                  Copiar e-mail
+                </button>
+                <a class="btn btn--secondary btn--sm" id="mailto-direct-link" href="mailto:ytalo6411@gmail.com">
+                  Abrir no e-mail ↗
+                </a>
+                <span class="copy-feedback" id="copy-email-feedback" role="status" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="channel-card">
+              <span class="channel-card__label">GitHub oficial</span>
+              <p class="channel-card__value">github.com/ytalo6411-art</p>
+              <div class="channel-card__actions">
+                <a
+                  class="btn btn--secondary btn--sm"
+                  href="https://github.com/ytalo6411-art"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Acessar perfil e repositórios ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- LinkedIn (Pendente de confirmação conforme especificação) -->
+            <div class="channel-card">
+              <span class="channel-card__label">LinkedIn</span>
+              <p class="channel-card__value" id="linkedin-status-text">Endereço em confirmação</p>
+              <p style="font-size: 0.86rem; color: var(--text-secondary);">
+                O link oficial do perfil no LinkedIn será habilitado no objeto de configuração assim que o endereço definitivo for confirmado pelo desenvolvedor.
+              </p>
+            </div>
+          </div>
+
+          <!-- Formulário Validado com Comunicação Transparente -->
+          <form class="contact-form" id="contact-form" novalidate data-reveal>
+            <div class="subhead" style="margin-bottom: 0.25rem; padding-bottom: 0.85rem;">
+              <h3 class="subhead__title" style="font-size: 1.2rem;">Preparar mensagem</h3>
+              <span class="subhead__meta">Validação local · Sem envio simulado</span>
+            </div>
+
+            <div class="form-field">
+              <div class="form-field__label-row">
+                <label for="contact-name">Nome *</label>
+              </div>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                autocomplete="name"
+                placeholder="Seu nome completo"
+                required
+                aria-describedby="error-contact-name"
+              >
+              <span class="form-field__error" id="error-contact-name" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <div class="form-field__label-row">
+                <label for="contact-email">E-mail *</label>
+              </div>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                autocomplete="email"
+                placeholder="voce@exemplo.com"
+                required
+                aria-describedby="error-contact-email"
+              >
+              <span class="form-field__error" id="error-contact-email" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <div class="form-field__label-row">
+                <label for="contact-subject">Assunto *</label>
+              </div>
+              <input
+                type="text"
+                id="contact-subject"
+                name="subject"
+                placeholder="Ex.: Oportunidade de estágio, projeto ou avaliação"
+                required
+                aria-describedby="error-contact-subject"
+              >
+              <span class="form-field__error" id="error-contact-subject" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <div class="form-field__label-row">
+                <label for="contact-message">Mensagem *</label>
+                <span class="form-field__counter" id="message-counter">0 / 1000</span>
+              </div>
+              <textarea
+                id="contact-message"
+                name="message"
+                maxlength="1000"
+                placeholder="Escreva sua mensagem com detalhes..."
+                required
+                aria-describedby="error-contact-message"
+              ></textarea>
+              <span class="form-field__error" id="error-contact-message" role="alert"></span>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+              <button type="submit" class="btn btn--primary">
+                <span>Validar mensagem</span>
+              </button>
+              <button type="reset" class="btn btn--ghost" id="reset-form-btn">
+                <span>Limpar campos</span>
+              </button>
+            </div>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite" hidden>
+              <p class="form-status__title" id="form-status-title"></p>
+              <p class="form-status__text" id="form-status-text"></p>
+              <div class="form-status__actions" id="form-status-actions" hidden>
+                <button type="button" class="btn btn--secondary btn--sm" id="copy-formatted-msg-btn">
+                  Copiar mensagem pronta
+                </button>
+                <a class="btn btn--primary btn--sm" id="open-mailto-prepared" href="mailto:ytalo6411@gmail.com">
+                  Abrir no cliente de e-mail ↗
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       SEÇÃO 09 — FOOTER
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">YTALO LIMA</p>
+        <p class="site-footer__note">
+          Portfólio desenvolvido do zero com HTML5 semântico, CSS3 moderno e JavaScript puro (ES6+), apresentando o estudo de caso oficial da plataforma esportiva <strong>ATHLETIX</strong>.
+        </p>
+      </div>
+      <div class="site-footer__meta">
+        <nav class="site-footer__links" aria-label="Links rápidos do rodapé">
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#athletix">ATHLETIX</a>
+          <a href="#tecnologias">Tecnologias</a>
+          <a href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </nav>
+        <p>&copy; 2026 Ytalo Gabriel de Lima Silva · Brasil</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button
+    type="button"
+    class="back-to-top"
+    id="back-to-top"
+    aria-label="Voltar ao topo da página"
+    title="Voltar ao topo"
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <!-- Modal Lightbox de Visualização Ampliada -->
+  <dialog class="lightbox" id="image-lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-desc">
+    <div class="lightbox__dialog">
+      <div class="lightbox__header">
+        <span class="lightbox__counter" id="lightbox-counter">01 / 08</span>
+        <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Fechar visualização ampliada">
+          Fechar [ESC]
+        </button>
+      </div>
+      <div class="lightbox__viewport">
+        <img id="lightbox-image" src="assets/projects/athletix-dashboard-desktop.jpg" alt="">
+      </div>
+      <div class="lightbox__footer">
+        <div>
+          <h3 class="lightbox__caption-title" id="lightbox-title">Título da captura</h3>
+          <p class="lightbox__caption-desc" id="lightbox-desc">Descrição técnica da captura</p>
+        </div>
+        <div class="lightbox__nav">
+          <button type="button" class="btn btn--secondary btn--sm" id="lightbox-prev" aria-label="Captura anterior">← Anterior</button>
+          <button type="button" class="btn btn--secondary btn--sm" id="lightbox-next" aria-label="Próxima captura">Próxima →</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
