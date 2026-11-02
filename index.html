@@ -60,14 +60,29 @@
       </a>
 
       <nav class="site-nav" aria-label="Navegação principal">
-        <a class="site-nav__link" href="#inicio" data-nav-target="inicio" aria-current="true">Início</a>
-        <a class="site-nav__link" href="#sobre" data-nav-target="sobre">Sobre</a>
-        <a class="site-nav__link" href="#athletix" data-nav-target="projetos">Projetos</a>
-        <a class="site-nav__link" href="#tecnologias" data-nav-target="tecnologias">Tecnologias</a>
-        <a class="site-nav__link" href="#contato" data-nav-target="contato">Contato</a>
+        <a class="site-nav__link" href="#inicio" data-nav-target="inicio" aria-current="true">
+          <span class="site-nav__num" aria-hidden="true">01</span>Início
+        </a>
+        <a class="site-nav__link" href="#sobre" data-nav-target="sobre">
+          <span class="site-nav__num" aria-hidden="true">02</span>Sobre
+        </a>
+        <a class="site-nav__link" href="#athletix" data-nav-target="projetos">
+          <span class="site-nav__num" aria-hidden="true">03</span>Projetos
+        </a>
+        <a class="site-nav__link" href="#tecnologias" data-nav-target="tecnologias">
+          <span class="site-nav__num" aria-hidden="true">04</span>Tecnologias
+        </a>
+        <a class="site-nav__link" href="#contato" data-nav-target="contato">
+          <span class="site-nav__num" aria-hidden="true">05</span>Contato
+        </a>
       </nav>
 
       <div class="header-actions">
+        <div class="reading-telemetry" aria-hidden="true">
+          <span class="reading-telemetry__dot"></span>
+          <span id="reading-telemetry-text">INÍCIO · 0%</span>
+        </div>
+
         <button
           type="button"
           class="theme-toggle"
@@ -104,18 +119,23 @@
     </div>
   </header>
 
-  <!-- Navegação Mobile -->
+  <!-- Scrim e Navegação Mobile -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" aria-hidden="true">
     <ul class="mobile-nav__list">
-      <li><a class="mobile-nav__link" href="#inicio" data-nav-target="inicio">Início <span>01</span></a></li>
-      <li><a class="mobile-nav__link" href="#sobre" data-nav-target="sobre">Sobre &amp; Trajetória <span>02</span></a></li>
-      <li><a class="mobile-nav__link" href="#athletix" data-nav-target="projetos">Projetos · ATHLETIX <span>03</span></a></li>
-      <li><a class="mobile-nav__link" href="#tecnologias" data-nav-target="tecnologias">Tecnologias <span>04</span></a></li>
-      <li><a class="mobile-nav__link" href="#contato" data-nav-target="contato">Contato <span>05</span></a></li>
+      <li><a class="mobile-nav__link" href="#inicio" data-nav-target="inicio">Início <span>01 →</span></a></li>
+      <li><a class="mobile-nav__link" href="#sobre" data-nav-target="sobre">Sobre &amp; Trajetória <span>02 →</span></a></li>
+      <li><a class="mobile-nav__link" href="#athletix" data-nav-target="projetos">Estudo de Caso · ATHLETIX <span>03 →</span></a></li>
+      <li><a class="mobile-nav__link" href="#tecnologias" data-nav-target="tecnologias">Tecnologias &amp; Ecossistema <span>04 →</span></a></li>
+      <li><a class="mobile-nav__link" href="#contato" data-nav-target="contato">Contato Direto <span>05 →</span></a></li>
     </ul>
+    <div class="mobile-nav__actions">
+      <a class="btn btn--primary btn--sm" href="https://athletix-lilac.vercel.app" target="_blank" rel="noopener noreferrer">Abrir ATHLETIX ↗</a>
+      <a class="btn btn--secondary btn--sm" href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">GitHub Oficial ↗</a>
+    </div>
     <div class="mobile-nav__meta">
       <span>Brasil · Português (pt-BR)</span>
-      <a href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">github.com/ytalo6411-art ↗</a>
+      <a href="docs/referencias-visuais.pdf" target="_blank" rel="noopener noreferrer">Referências Visuais (PDF) ↗</a>
     </div>
   </nav>
 
@@ -123,7 +143,7 @@
     <!-- =====================================================================
          SEÇÃO 01 — HERO / APRESENTAÇÃO INICIAL
          ===================================================================== -->
-    <section class="hero" id="inicio" data-section-group="inicio" aria-labelledby="hero-title">
+    <section class="hero" id="inicio" data-section-group="inicio" data-section-label="INÍCIO" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero__grid">
           <div class="hero__content" data-reveal>
@@ -134,7 +154,7 @@
               <span>HTML5 / CSS3 / JS ES6+</span>
             </div>
 
-            <h1 class="hero__title" id="hero-title">YTALO LIMA</h1>
+            <h1 class="hero__title" id="hero-title">YTALO LIMA<span class="hero__title-dot" aria-hidden="true">.</span></h1>
             <p class="hero__role">Desenvolvedor de software em formação</p>
 
             <p class="hero__manifesto">
@@ -147,12 +167,12 @@
 
             <div class="hero__actions">
               <a class="btn btn--primary" href="#athletix">
-                <span>Conhecer o ATHLETIX</span>
+                <span>Explorar caso ATHLETIX</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M7 17L17 7M9 7h8v8"></path>
                 </svg>
               </a>
-              <a class="btn btn--secondary" href="#trajetoria">
+              <a class="btn btn--secondary btn--down" href="#trajetoria">
                 <span>Minha trajetória</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M12 5v14M19 12l-7 7-7-7"></path>
@@ -160,79 +180,103 @@
               </a>
             </div>
 
-            <a
-              class="hero__github-link"
-              href="https://github.com/ytalo6411-art"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M15 21v-3.5a3.2 3.2 0 0 0-.9-2.5c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.3-3.5 4.6 4.6 0 0 0-.1-3.4s-1.1-.3-3.6 1.3a12.3 12.3 0 0 0-6.2 0C6.4 1.3 5.3 1.6 5.3 1.6a4.6 4.6 0 0 0-.1 3.4A5 5 0 0 0 3.9 8.5c0 5 3 6.2 6 6.5a3.2 3.2 0 0 0-.9 2.5V21"></path>
-                <path d="M9 18c-4 1.4-4-2-6-2"></path>
-              </svg>
-              <span>GitHub Oficial — github.com/ytalo6411-art</span>
-            </a>
+            <div class="hero__links-row">
+              <a
+                class="hero__github-link"
+                href="https://github.com/ytalo6411-art"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 21v-3.5a3.2 3.2 0 0 0-.9-2.5c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.3-3.5 4.6 4.6 0 0 0-.1-3.4s-1.1-.3-3.6 1.3a12.3 12.3 0 0 0-6.2 0C6.4 1.3 5.3 1.6 5.3 1.6a4.6 4.6 0 0 0-.1 3.4A5 5 0 0 0 3.9 8.5c0 5 3 6.2 6 6.5a3.2 3.2 0 0 0-.9 2.5V21"></path>
+                  <path d="M9 18c-4 1.4-4-2-6-2"></path>
+                </svg>
+                <span>github.com/ytalo6411-art ↗</span>
+              </a>
+
+              <a
+                class="hero__github-link"
+                href="docs/referencias-visuais.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <path d="M14 2v6h6M16 13H8M16 17H8"></path>
+                </svg>
+                <span>Dossiê de Referências (PDF A4) ↗</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Composição Visual Autoral (Arquitetura & Sistema Editorial — Sem rosto fictício) -->
-          <aside class="hero-construct" aria-label="Diagrama visual autoral de engenharia e sistemas" data-reveal>
+          <!-- Composição Visual Autoral Interativa (Sem rosto fictício) -->
+          <aside class="hero-construct editorial-frame" aria-label="Diagrama interativo de engenharia em camadas" data-reveal>
             <div class="hero-construct__bar">
-              <span>ARQUITETURA.SYS // 01</span>
-              <span>DOSSIÊ TÉCNICO</span>
+              <span>ARQUITETURA.SYS // INSPECIONÁVEL</span>
+              <span>CLIQUE NAS CAMADAS</span>
             </div>
-            <div class="hero-construct__canvas">
-              <svg class="hero-construct__svg" viewBox="0 0 460 320" role="img" aria-label="Construção geométrica abstrata representando camadas de interface, serviços de validação e banco de dados relacional">
-                <defs>
-                  <linearGradient id="constructAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#C4F55A" stop-opacity="0.9"/>
-                    <stop offset="100%" stop-color="#9DE9CB" stop-opacity="0.75"/>
-                  </linearGradient>
-                </defs>
 
+            <div class="hero-construct__tabs" role="tablist" aria-label="Selecionar camada arquitetural">
+              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="0" aria-selected="true">01 · Interface</button>
+              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="1" aria-selected="false">02 · Contratos</button>
+              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="2" aria-selected="false">03 · Dados &amp; RLS</button>
+            </div>
+
+            <div class="hero-construct__canvas">
+              <svg class="hero-construct__svg" viewBox="0 0 460 308" role="img" aria-label="Construção geométrica interativa representando três camadas: Interface e Experiência, Lógica e Contratos, e Dados Relacionais com RLS">
                 <!-- Moldura de coordenadas -->
-                <rect x="12" y="12" width="436" height="296" fill="none" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>
-                <line x1="12" y1="62" x2="448" y2="62" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
-                <line x1="152" y1="12" x2="152" y2="308" stroke="currentColor" stroke-opacity="0.12" stroke-dasharray="4 4"/>
+                <rect x="12" y="10" width="436" height="288" fill="none" stroke="currentColor" stroke-opacity="0.16" stroke-width="1"/>
+                <line x1="12" y1="56" x2="448" y2="56" stroke="currentColor" stroke-opacity="0.14" stroke-width="1"/>
+                <line x1="152" y1="10" x2="152" y2="298" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="4 4"/>
 
                 <!-- Cabeçalho interno -->
-                <rect x="26" y="30" width="10" height="10" style="fill: var(--accent-primary)"/>
-                <text x="46" y="39" fill="currentColor" fill-opacity="0.78" font-family="monospace" font-size="11" letter-spacing="1.5">SISTEMA EM CAMADAS · VERIFICÁVEL</text>
-                <text x="392" y="39" style="fill: var(--accent-alt)" font-family="monospace" font-weight="600" font-size="11">v2.0</text>
+                <rect x="26" y="28" width="9" height="9" style="fill: var(--accent-primary)"/>
+                <text x="44" y="36" fill="currentColor" fill-opacity="0.78" font-family="monospace" font-size="10.5" letter-spacing="1.4">SISTEMA EM CAMADAS · VERIFICÁVEL</text>
+                <text x="394" y="36" style="fill: var(--accent-alt)" font-family="monospace" font-weight="600" font-size="10.5">v2.0</text>
 
                 <!-- Camada 01: Interface -->
-                <g>
-                  <rect x="28" y="82" width="286" height="54" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.32" stroke-width="1.2"/>
-                  <rect x="28" y="82" width="4" height="54" style="fill: var(--accent-primary)"/>
-                  <text x="44" y="104" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">01 · INTERFACE &amp; EXPERIÊNCIA</text>
-                  <text x="44" y="122" fill="currentColor" fill-opacity="0.68" font-family="monospace" font-size="10.5">HTML5 · CSS3 · React 18 · Acessibilidade</text>
+                <g class="blueprint-layer is-active" data-blueprint-layer="0">
+                  <rect class="layer-box" x="28" y="74" width="286" height="54" fill="currentColor" fill-opacity="0.05" style="stroke: var(--accent-primary)" stroke-opacity="0.45" stroke-width="1.3"/>
+                  <rect x="28" y="74" width="4" height="54" style="fill: var(--accent-primary)"/>
+                  <text x="44" y="96" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">01 · INTERFACE &amp; EXPERIÊNCIA</text>
+                  <text x="44" y="114" fill="currentColor" fill-opacity="0.68" font-family="monospace" font-size="10.5">HTML5 · CSS3 · React 18 · Acessibilidade</text>
                 </g>
 
                 <!-- Camada 02: Regras & Validações -->
-                <g>
-                  <rect x="64" y="156" width="290" height="54" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.32" stroke-width="1.2"/>
-                  <rect x="64" y="156" width="4" height="54" style="fill: var(--accent-alt)"/>
-                  <text x="80" y="178" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">02 · LÓGICA, REGRAS &amp; CONTRATOS</text>
-                  <text x="80" y="196" fill="currentColor" fill-opacity="0.68" font-family="monospace" font-size="10.5">TypeScript · ES6+ · Zod · Testes</text>
+                <g class="blueprint-layer" data-blueprint-layer="1">
+                  <rect class="layer-box" x="64" y="148" width="290" height="54" fill="currentColor" fill-opacity="0.04" style="stroke: var(--accent-alt)" stroke-opacity="0.42" stroke-width="1.3"/>
+                  <rect x="64" y="148" width="4" height="54" style="fill: var(--accent-alt)"/>
+                  <text x="80" y="170" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">02 · LÓGICA, REGRAS &amp; CONTRATOS</text>
+                  <text x="80" y="188" fill="currentColor" fill-opacity="0.68" font-family="monospace" font-size="10.5">TypeScript · ES6+ · Zod · Testes</text>
                 </g>
 
                 <!-- Camada 03: Dados & Segurança -->
-                <g>
-                  <rect x="100" y="230" width="326" height="56" fill="currentColor" fill-opacity="0.06" style="stroke: var(--accent-primary)" stroke-opacity="0.8" stroke-width="1.3"/>
-                  <text x="116" y="253" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">03 · DADOS RELACIONAIS &amp; RLS</text>
-                  <text x="116" y="272" fill="currentColor" fill-opacity="0.72" font-family="monospace" font-size="10.5">PostgreSQL · Supabase Auth · RPC Transacional</text>
+                <g class="blueprint-layer" data-blueprint-layer="2">
+                  <rect class="layer-box" x="100" y="222" width="326" height="56" fill="currentColor" fill-opacity="0.05" style="stroke: var(--accent-primary)" stroke-opacity="0.55" stroke-width="1.3"/>
+                  <rect x="100" y="222" width="4" height="56" style="fill: var(--accent-primary)"/>
+                  <text x="116" y="245" fill="currentColor" font-family="sans-serif" font-weight="700" font-size="13">03 · DADOS RELACIONAIS &amp; RLS</text>
+                  <text x="116" y="264" fill="currentColor" fill-opacity="0.72" font-family="monospace" font-size="10.5">PostgreSQL · Supabase Auth · RPC Transacional</text>
                 </g>
 
                 <!-- Conectores vetoriais -->
-                <path d="M314 109 H392 V230" fill="none" style="stroke: var(--accent-primary)" stroke-width="1.5"/>
-                <circle cx="392" cy="109" r="4" style="fill: var(--accent-primary)"/>
-                <circle cx="392" cy="183" r="4" style="fill: var(--accent-alt)"/>
-                <line x1="354" y1="183" x2="392" y2="183" style="stroke: var(--accent-alt)" stroke-width="1.4"/>
-                <circle cx="392" cy="230" r="4.5" style="fill: var(--accent-primary)"/>
+                <path d="M314 101 H392 V222" fill="none" style="stroke: var(--accent-primary)" stroke-width="1.5"/>
+                <circle cx="392" cy="101" r="4.5" style="fill: var(--accent-primary)"/>
+                <circle cx="392" cy="175" r="4.5" style="fill: var(--accent-alt)"/>
+                <line x1="354" y1="175" x2="392" y2="175" style="stroke: var(--accent-alt)" stroke-width="1.4"/>
+                <circle cx="392" cy="222" r="4.5" style="fill: var(--accent-primary)"/>
 
                 <!-- Selo geométrico orbital -->
-                <circle cx="392" cy="109" r="24" fill="none" stroke="currentColor" stroke-opacity="0.22" stroke-dasharray="3 3"/>
+                <circle cx="392" cy="101" r="22" fill="none" stroke="currentColor" stroke-opacity="0.22" stroke-dasharray="3 3"/>
               </svg>
             </div>
+
+            <div class="hero-construct__readout" aria-live="polite">
+              <span class="hero-construct__readout-label" id="hero-readout-label">CAMADA 01 · INTERFACE &amp; ACESSIBILIDADE</span>
+              <p class="hero-construct__readout-text" id="hero-readout-text">
+                Semântica HTML5, responsividade testada de 320px a 1920px, temas escuro/claro e navegação acessível por teclado neste portfólio e no ATHLETIX.
+              </p>
+            </div>
+
             <div class="hero-construct__specs">
               <div class="hero-construct__spec">
                 <span class="hero-construct__spec-label">Projeto Principal</span>
@@ -257,10 +301,18 @@
         <div class="hero__footer">
           <a class="scroll-cue" href="#sobre">
             <span class="scroll-cue__line" aria-hidden="true"></span>
-            <span>Rolar para explorar o portfólio</span>
+            <span>Rolar para explorar</span>
             <span aria-hidden="true">↓</span>
           </a>
-          <span class="mono-tag">ÍNDICE EDITORIAL · 08 SEÇÕES</span>
+
+          <nav class="hero__quick-index" aria-label="Índice rápido das seções">
+            <a class="quick-jump" href="#sobre"><span>01</span> Sobre</a>
+            <a class="quick-jump" href="#trajetoria"><span>02</span> Trajetória</a>
+            <a class="quick-jump" href="#athletix"><span>03</span> ATHLETIX</a>
+            <a class="quick-jump" href="#arquitetura"><span>04</span> Arquitetura</a>
+            <a class="quick-jump" href="#tecnologias"><span>05</span> Stack</a>
+            <a class="quick-jump" href="#contato"><span>07</span> Contato</a>
+          </nav>
         </div>
       </div>
     </section>
@@ -268,11 +320,12 @@
     <!-- =====================================================================
          SEÇÃO 02 — SOBRE MIM
          ===================================================================== -->
-    <section class="section" id="sobre" data-section-group="sobre" aria-labelledby="sobre-title">
+    <section class="section" id="sobre" data-section-group="sobre" data-section-label="SOBRE MIM" aria-labelledby="sobre-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">01 / Sobre mim</span>
+            <span class="section-kicker">Perfil · Valores · Visão de Sistemas</span>
           </div>
           <div>
             <h2 class="section-title" id="sobre-title">Curiosidade transformada em disciplina de construção.</h2>
@@ -283,10 +336,8 @@
         </header>
 
         <div class="about-grid">
-          <!-- Ficha de Identificação Pessoal (Editável para revisão) -->
-          <!-- NOTA DE REVISÃO: Caso deseje inserir uma fotografia pessoal real futuramente,
-               substitua o bloco .dossier-card__monogram por <img src="assets/images/ytalo-lima.jpg" alt="Retrato de Ytalo Lima"> -->
-          <aside class="dossier-card" aria-label="Ficha de identificação do desenvolvedor" data-reveal>
+          <!-- Ficha de Identificação Pessoal (Fixa em Desktop · Editável para revisão) -->
+          <aside class="dossier-card editorial-frame" aria-label="Ficha de identificação do desenvolvedor" data-reveal>
             <div class="dossier-card__monogram">
               <div class="dossier-card__initials" aria-hidden="true">YL<span>.</span></div>
               <div class="dossier-card__coord">
@@ -317,9 +368,15 @@
                 <dd class="dossier-list__desc">Brasil</dd>
               </div>
             </dl>
+            <div class="dossier-card__footer">
+              <a class="dossier-doc-link" href="docs/referencias-visuais.pdf" target="_blank" rel="noopener noreferrer">
+                <span>Referências Visuais · PDF A4</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </aside>
 
-          <!-- Narrativa Pessoal (Editável para revisão do autor) -->
+          <!-- Narrativa Pessoal -->
           <div class="about-prose" data-reveal>
             <p class="about-prose__lead">
               Meu interesse pela tecnologia começou pela curiosidade: observar páginas, aplicativos e ferramentas do dia a dia e querer entender o que acontecia por trás da interface.
@@ -351,11 +408,12 @@
     <!-- =====================================================================
          SEÇÃO 03 — TRAJETÓRIA & PROCESSO DE DESENVOLVIMENTO
          ===================================================================== -->
-    <section class="section section--secondary" id="trajetoria" data-section-group="sobre" aria-labelledby="trajetoria-title">
+    <section class="section section--secondary" id="trajetoria" data-section-group="sobre" data-section-label="TRAJETÓRIA" aria-labelledby="trajetoria-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">02 / Trajetória</span>
+            <span class="section-kicker">Marcos Reais · Método de Trabalho</span>
           </div>
           <div>
             <h2 class="section-title" id="trajetoria-title">Do primeiro código ao desenvolvimento de sistemas completos.</h2>
@@ -405,31 +463,31 @@
           </ol>
 
           <div class="process-block" data-reveal>
-            <h3 class="process-block__title">Meu processo de desenvolvimento</h3>
+            <h3 class="process-block__title">Meu processo de desenvolvimento em 4 fases</h3>
             <div class="process-grid">
               <article class="process-card">
-                <span class="process-card__num">FASE 01</span>
+                <span class="process-card__num"><span>FASE 01</span> <span aria-hidden="true">→</span></span>
                 <h4 class="process-card__title">Diagnóstico e Escopo</h4>
                 <p class="process-card__text">
                   Levantamento claro do problema real, separando o que é regra essencial do produto do que depende de integrações externas.
                 </p>
               </article>
               <article class="process-card">
-                <span class="process-card__num">FASE 02</span>
+                <span class="process-card__num"><span>FASE 02</span> <span aria-hidden="true">→</span></span>
                 <h4 class="process-card__title">Dados e Contratos</h4>
                 <p class="process-card__text">
                   Modelagem de tabelas, políticas de acesso (RLS), schemas de validação e serviços previsíveis antes de acoplar telas complexas.
                 </p>
               </article>
               <article class="process-card">
-                <span class="process-card__num">FASE 03</span>
+                <span class="process-card__num"><span>FASE 03</span> <span aria-hidden="true">→</span></span>
                 <h4 class="process-card__title">Interface e Acessibilidade</h4>
                 <p class="process-card__text">
                   Construção responsiva de 320px ao desktop amplo, semântica HTML, navegação por teclado, estados vazios claros e contraste legível.
                 </p>
               </article>
               <article class="process-card">
-                <span class="process-card__num">FASE 04</span>
+                <span class="process-card__num"><span>FASE 04</span> <span aria-hidden="true">✓</span></span>
                 <h4 class="process-card__title">Testes e Verificação</h4>
                 <p class="process-card__text">
                   Validação automatizada de regras de negócio, integridade do banco de dados, internacionalização e fluxos críticos no navegador.
@@ -444,11 +502,12 @@
     <!-- =====================================================================
          SEÇÃO 04 — PROJETO PRINCIPAL: ATHLETIX (ESTUDO DE CASO)
          ===================================================================== -->
-    <section class="section section--case" id="athletix" data-section-group="projetos" aria-labelledby="athletix-title">
+    <section class="section section--case" id="athletix" data-section-group="projetos" data-section-label="CASO ATHLETIX" aria-labelledby="athletix-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">03 / Projeto principal</span>
+            <span class="section-kicker">Estudo de Caso Completo · Produto &amp; Código</span>
           </div>
           <div>
             <h2 class="section-title" id="athletix-title">ATHLETIX — Estudo de caso de engenharia de software.</h2>
@@ -458,8 +517,8 @@
           </div>
         </header>
 
-        <!-- Cabeçalho de Produto + Links Oficiais + Fatos Documentados -->
-        <article class="case-banner" data-reveal>
+        <!-- Cabeçalho de Produto + Contexto + Fatos Documentados -->
+        <article class="case-banner editorial-frame" data-reveal>
           <div class="case-banner__top">
             <span class="mono-tag mono-tag--accent">PRODUTO OFICIAL · ESTUDO DE CASO COMPLETO</span>
             <span class="mono-tag">VERSÃO DOCUMENTADA: PROMAX V10</span>
@@ -502,6 +561,27 @@
             </div>
           </div>
 
+          <div class="case-context-grid" aria-label="Problema, solução e diferencial técnico">
+            <div class="case-context-item">
+              <span class="case-context-item__label">01 · Problema Abordado</span>
+              <p class="case-context-item__text">
+                Praticantes costumam dividir treinos em planilhas soltas, vídeos dispersos e anotações de dieta desconectadas, dificultando consistência e acompanhamento real de progresso.
+              </p>
+            </div>
+            <div class="case-context-item">
+              <span class="case-context-item__label">02 · Solução Construída</span>
+              <p class="case-context-item__text">
+                Fluxo integrado que parte de um questionário personalizado, gera divisões semanais auditáveis, guia a sessão com cronômetro e conecta nutrição, água e evolução em um único lugar.
+              </p>
+            </div>
+            <div class="case-context-item">
+              <span class="case-context-item__label">03 · Rigor de Engenharia</span>
+              <p class="case-context-item__text">
+                Motor de treinos 100% determinístico (independe de IA externa), isolamento por usuário com RLS no PostgreSQL e encerramento de sessão via RPC transacional.
+              </p>
+            </div>
+          </div>
+
           <div class="facts-strip" aria-label="Dados técnicos documentados do ATHLETIX">
             <div class="fact-item">
               <div class="fact-item__value">317 exercícios</div>
@@ -522,75 +602,99 @@
           </div>
         </article>
 
-        <!-- Composição Grande: Mockup Desktop + Mockup Mobile -->
-        <div class="mockup-stage" data-reveal>
-          <figure class="device-frame">
-            <div class="device-frame__chrome" aria-hidden="true">
-              <span class="device-frame__dots"><span></span><span></span><span></span></span>
-              <span class="device-frame__url">athletix-lilac.vercel.app/app — Painel do Atleta (Desktop 1440px)</span>
-              <span>PT-BR</span>
+        <!-- Palco Interativo de Mockups Desktop + Mobile -->
+        <div data-reveal>
+          <div class="stage-controls">
+            <span class="stage-controls__label">Tour Interativo das Telas Reais · Alterne o módulo em destaque:</span>
+            <div class="stage-tabs" role="tablist" aria-label="Alternar tela exibida no mockup desktop">
+              <button type="button" class="stage-tab" role="tab" data-stage-desktop="1" aria-selected="true">Painel (/app)</button>
+              <button type="button" class="stage-tab" role="tab" data-stage-desktop="2" aria-selected="false">317 Exercícios</button>
+              <button type="button" class="stage-tab" role="tab" data-stage-desktop="3" aria-selected="false">Planos Semanais</button>
+              <button type="button" class="stage-tab" role="tab" data-stage-desktop="4" aria-selected="false">Nutrição &amp; Água</button>
+              <button type="button" class="stage-tab" role="tab" data-stage-desktop="5" aria-selected="false">Evolução SVG</button>
+              <button type="button" class="stage-tab" role="tab" data-stage-desktop="0" aria-selected="false">Login 4 Idiomas</button>
             </div>
-            <button
-              type="button"
-              class="device-frame__screen"
-              data-lightbox-index="1"
-              aria-label="Ampliar captura desktop do painel principal do ATHLETIX"
-            >
-              <img
-                src="assets/projects/athletix-dashboard-desktop.jpg"
-                alt="Tela real do painel principal do ATHLETIX exibindo objetivo de treino, próximo treino recomendado e divisão semanal ABC"
-                width="1440"
-                height="900"
-                loading="eager"
-              >
-              <span class="device-frame__zoom">Ampliar captura ↗</span>
-            </button>
-            <figcaption class="device-frame__caption">
-              <strong>Mockup Desktop · Interface real do código-fonte oficial:</strong> painel inicial do ATHLETIX com objetivo ativo, sequência semanal, indicação transparente de plano gerado por regras e atalho direto de sessão.
-            </figcaption>
-          </figure>
+          </div>
 
-          <figure class="device-frame device-frame--mobile">
-            <div class="device-frame__chrome" aria-hidden="true">
-              <span class="device-frame__dots"><span></span><span></span></span>
-              <span class="device-frame__url">Sessão Mobile · 390px</span>
-            </div>
-            <button
-              type="button"
-              class="device-frame__screen"
-              data-lightbox-index="6"
-              aria-label="Ampliar captura mobile da execução de treino do ATHLETIX"
-            >
-              <img
-                src="assets/projects/athletix-session-mobile.jpg"
-                alt="Tela mobile real da execução de sessão do ATHLETIX mostrando exercício atual, instruções, cronômetro de descanso e barra de navegação inferior"
-                width="780"
-                height="1688"
-                loading="lazy"
+          <div class="mockup-stage">
+            <figure class="device-frame">
+              <div class="device-frame__chrome">
+                <span class="device-frame__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="device-frame__url" id="stage-desktop-url">athletix-lilac.vercel.app/app — Painel do Atleta</span>
+                <span>PT-BR</span>
+              </div>
+              <button
+                type="button"
+                class="device-frame__screen"
+                id="stage-desktop-trigger"
+                data-lightbox-index="1"
+                aria-label="Ampliar captura desktop atualmente em destaque do ATHLETIX"
               >
-              <span class="device-frame__zoom">Ampliar ↗</span>
-            </button>
-            <figcaption class="device-frame__caption">
-              <strong>Mockup Mobile (390px):</strong> execução de treino com cronômetro de descanso pausável e navegação inferior acessível (alvos ≥ 44px).
-            </figcaption>
-          </figure>
+                <img
+                  id="stage-desktop-img"
+                  src="assets/projects/athletix-dashboard-desktop.jpg"
+                  alt="Tela real do painel principal do ATHLETIX exibindo objetivo de treino, próximo treino recomendado e divisão semanal ABC"
+                  width="1440"
+                  height="900"
+                  loading="eager"
+                >
+                <span class="device-frame__zoom">Ampliar em alta resolução ↗</span>
+              </button>
+              <figcaption class="device-frame__caption" id="stage-desktop-caption">
+                <strong>Mockup Desktop · /app:</strong> painel inicial do ATHLETIX com objetivo ativo, sequência semanal, indicação transparente de plano gerado por regras e atalho direto de sessão.
+              </figcaption>
+            </figure>
+
+            <figure class="device-frame device-frame--mobile">
+              <div class="device-frame__chrome">
+                <span class="device-frame__dots" aria-hidden="true"><span></span><span></span></span>
+                <div class="device-frame__mobile-switch" role="tablist" aria-label="Alternar tela mobile em destaque">
+                  <button type="button" class="mobile-frame-btn" role="tab" data-stage-mobile="6" aria-selected="true">Sessão</button>
+                  <button type="button" class="mobile-frame-btn" role="tab" data-stage-mobile="7" aria-selected="false">Painel</button>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="device-frame__screen"
+                id="stage-mobile-trigger"
+                data-lightbox-index="6"
+                aria-label="Ampliar captura mobile atualmente em destaque do ATHLETIX"
+              >
+                <img
+                  id="stage-mobile-img"
+                  src="assets/projects/athletix-session-mobile.jpg"
+                  alt="Tela mobile real da execução de sessão do ATHLETIX mostrando exercício atual, instruções, cronômetro de descanso e barra de navegação inferior"
+                  width="780"
+                  height="1688"
+                  loading="lazy"
+                >
+                <span class="device-frame__zoom">Ampliar ↗</span>
+              </button>
+              <figcaption class="device-frame__caption" id="stage-mobile-caption">
+                <strong>Mobile 390px · Sessão:</strong> execução de treino com cronômetro de descanso pausável e alvos de toque ≥ 44px.
+              </figcaption>
+            </figure>
+          </div>
         </div>
 
         <!-- Galeria Interativa de Capturas Reais da Aplicação -->
         <div class="screens-block" data-reveal>
           <div class="subhead">
             <div>
-              <h3 class="subhead__title">Galeria de capturas reais da aplicação</h3>
+              <h3 class="subhead__title">Galeria completa de capturas reais</h3>
             </div>
-            <span class="subhead__meta">Clique em qualquer tela para visualização ampliada · 8 telas documentadas</span>
+            <span class="subhead__meta">Clique em qualquer cartão para abrir o Lightbox com miniaturas</span>
           </div>
 
-          <div class="filter-bar" role="toolbar" aria-label="Filtrar capturas do ATHLETIX por módulo">
-            <button type="button" class="filter-chip" data-screen-filter="all" aria-pressed="true">Todas (8)</button>
-            <button type="button" class="filter-chip" data-screen-filter="acesso" aria-pressed="false">Acesso &amp; i18n</button>
-            <button type="button" class="filter-chip" data-screen-filter="treino" aria-pressed="false">Treino &amp; Catálogo</button>
-            <button type="button" class="filter-chip" data-screen-filter="nutricao" aria-pressed="false">Nutrição &amp; Evolução</button>
-            <button type="button" class="filter-chip" data-screen-filter="mobile" aria-pressed="false">Mobile (390px)</button>
+          <div class="filter-toolbar-row">
+            <div class="filter-bar" role="toolbar" aria-label="Filtrar capturas do ATHLETIX por módulo">
+              <button type="button" class="filter-chip" data-screen-filter="all" aria-pressed="true">Todas (8)</button>
+              <button type="button" class="filter-chip" data-screen-filter="acesso" aria-pressed="false">Acesso &amp; i18n</button>
+              <button type="button" class="filter-chip" data-screen-filter="treino" aria-pressed="false">Treino &amp; Catálogo</button>
+              <button type="button" class="filter-chip" data-screen-filter="nutricao" aria-pressed="false">Nutrição &amp; Evolução</button>
+              <button type="button" class="filter-chip" data-screen-filter="mobile" aria-pressed="false">Mobile (390px)</button>
+            </div>
+            <span class="filter-count" id="screen-filter-count" aria-live="polite">Exibindo 8 de 8 capturas</span>
           </div>
 
           <div class="screens-grid" id="athletix-screens-grid">
@@ -601,8 +705,8 @@
                 <span class="screen-card__badge">/app/login · Desktop</span>
               </button>
               <div class="screen-card__body">
-                <h4 class="screen-card__title">Autenticação &amp; Seletor em 4 Idiomas</h4>
-                <p class="screen-card__desc">Rota pública real publicada na Vercel com suporte a pt-BR, en, es e fr, login por e-mail/senha e verificação preventiva do provedor Google OAuth.</p>
+                <h4 class="screen-card__title">Autenticação &amp; 4 Idiomas</h4>
+                <p class="screen-card__desc">Rota pública real na Vercel com suporte a pt-BR, en, es e fr, e-mail/senha e checagem preventiva de Google OAuth.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -615,7 +719,7 @@
               </button>
               <div class="screen-card__body">
                 <h4 class="screen-card__title">Dashboard e Próxima Sessão</h4>
-                <p class="screen-card__desc">Visão consolidada da meta semanal, dias ativos, recomendação automática do próximo treino da divisão e acesso rápido ao treinador.</p>
+                <p class="screen-card__desc">Visão consolidada da meta semanal, dias ativos, recomendação automática do próximo treino e acesso rápido.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -628,7 +732,7 @@
               </button>
               <div class="screen-card__body">
                 <h4 class="screen-card__title">Biblioteca de 317 Exercícios</h4>
-                <p class="screen-card__desc">Busca textual com debounce, filtros combinados de músculo, equipamento e nível, nomes revisados em pt-BR e carregamento de vídeo sob demanda.</p>
+                <p class="screen-card__desc">Busca com debounce, filtros combinados de músculo, equipamento e nível, nomes em pt-BR e vídeo sob demanda.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -640,8 +744,8 @@
                 <span class="screen-card__badge">/app/workouts · Planos</span>
               </button>
               <div class="screen-card__body">
-                <h4 class="screen-card__title">Gerador de Planos e Divisão Semanal</h4>
-                <p class="screen-card__desc">Programa agrupado por <code>program_id</code> listando exercícios reais, séries, repetições, justificativa técnica e abas de Modelos e Histórico editável.</p>
+                <h4 class="screen-card__title">Gerador e Divisão Semanal</h4>
+                <p class="screen-card__desc">Programa agrupado por <code>program_id</code> listando exercícios, séries, repetições, justificativa e histórico editável.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -653,8 +757,8 @@
                 <span class="screen-card__badge">/app/nutrition · Nutrição</span>
               </button>
               <div class="screen-card__body">
-                <h4 class="screen-card__title">Nutrição Visual, Diário e Hidratação</h4>
-                <p class="screen-card__desc">Montagem de pratos com porções e substituições, separação estrita entre sugestão e consumo registrado, busca em múltiplas fontes e hidratação.</p>
+                <h4 class="screen-card__title">Nutrição, Diário e Água</h4>
+                <p class="screen-card__desc">Pratos com porções e substituições, separação entre sugestão e consumo real, pesquisa em múltiplas fontes e água.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -663,11 +767,11 @@
             <article class="screen-card" data-screen-category="nutricao">
               <button type="button" class="screen-card__trigger" data-lightbox-index="5" aria-label="Ampliar tela de Evolução do Atleta do ATHLETIX">
                 <img src="assets/projects/athletix-progress-desktop.jpg" alt="Tela de evolução do ATHLETIX com gráfico vetorial SVG de volume por sessão, barras de frequência semanal e comparativo de 30 dias" width="1440" height="900" loading="lazy">
-                <span class="screen-card__badge">/app/progress · Gráficos SVG</span>
+                <span class="screen-card__badge">/app/progress · SVG</span>
               </button>
               <div class="screen-card__body">
-                <h4 class="screen-card__title">Evolução, Gráficos SVG e Recordes</h4>
-                <p class="screen-card__desc">Gráfico de volume em SVG nativo (sem dependências pesadas de gráficos), consistência semanal, medidas corporais e comparativo entre períodos.</p>
+                <h4 class="screen-card__title">Evolução e Gráficos SVG</h4>
+                <p class="screen-card__desc">Gráfico de volume em SVG nativo, consistência semanal, medidas corporais, recordes e comparativo de 30 dias.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -676,11 +780,11 @@
             <article class="screen-card" data-screen-category="mobile">
               <button type="button" class="screen-card__trigger" data-lightbox-index="6" aria-label="Ampliar tela mobile de Execução de Sessão do ATHLETIX">
                 <img src="assets/projects/athletix-session-mobile.jpg" alt="Execução de treino mobile em 390px no ATHLETIX com instruções, cronômetro de descanso e séries persistidas" width="780" height="1688" loading="lazy">
-                <span class="screen-card__badge">/app/session · Mobile 390px</span>
+                <span class="screen-card__badge">/app/session · 390px</span>
               </button>
               <div class="screen-card__body">
-                <h4 class="screen-card__title">Execução de Sessão e Cronômetro</h4>
-                <p class="screen-card__desc">Séries salvas no banco (sobrevivem a reload), cronômetro de descanso com pausa/pular e encerramento atômico somente após série válida.</p>
+                <h4 class="screen-card__title">Sessão Mobile &amp; Cronômetro</h4>
+                <p class="screen-card__desc">Séries salvas no banco (sobrevivem a reload), cronômetro pausável e encerramento atômico após série válida.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -692,8 +796,8 @@
                 <span class="screen-card__badge">/app · Mobile 390px</span>
               </button>
               <div class="screen-card__body">
-                <h4 class="screen-card__title">Shell Mobile sem Overflow Horizontal</h4>
-                <p class="screen-card__desc">Adaptação para telas estreitas testada desde 320px, com barra inferior de 5 destinos, safe-area e leitura hierárquica limpa.</p>
+                <h4 class="screen-card__title">Shell Mobile sem Overflow</h4>
+                <p class="screen-card__desc">Adaptação para telas estreitas testada desde 320px, com barra inferior de 5 destinos e leitura hierárquica limpa.</p>
                 <span class="screen-card__action">Inspecionar tela ↗</span>
               </div>
             </article>
@@ -709,11 +813,14 @@
             <span class="subhead__meta">Mapeamento fiel ao código e ao relatório PROMAX V10</span>
           </div>
 
-          <div class="filter-bar" role="toolbar" aria-label="Filtrar as 18 funcionalidades do ATHLETIX">
-            <button type="button" class="filter-chip" data-feature-filter="all" aria-pressed="true">Todas (18)</button>
-            <button type="button" class="filter-chip" data-feature-filter="treinamento" aria-pressed="false">Treinamento (9)</button>
-            <button type="button" class="filter-chip" data-feature-filter="nutricao-evolucao" aria-pressed="false">Nutrição &amp; Evolução (5)</button>
-            <button type="button" class="filter-chip" data-feature-filter="plataforma" aria-pressed="false">Plataforma &amp; Segurança (4)</button>
+          <div class="filter-toolbar-row">
+            <div class="filter-bar" role="toolbar" aria-label="Filtrar as 18 funcionalidades do ATHLETIX">
+              <button type="button" class="filter-chip" data-feature-filter="all" aria-pressed="true">Todas (18)</button>
+              <button type="button" class="filter-chip" data-feature-filter="treinamento" aria-pressed="false">Treinamento (9)</button>
+              <button type="button" class="filter-chip" data-feature-filter="nutricao-evolucao" aria-pressed="false">Nutrição &amp; Evolução (5)</button>
+              <button type="button" class="filter-chip" data-feature-filter="plataforma" aria-pressed="false">Plataforma &amp; Segurança (4)</button>
+            </div>
+            <span class="filter-count" id="feature-filter-count" aria-live="polite">Exibindo 18 de 18 funcionalidades</span>
           </div>
 
           <div class="features-matrix" id="athletix-features-matrix">
@@ -832,11 +939,12 @@
     <!-- =====================================================================
          SEÇÃO 05 — ARQUITETURA E DESENVOLVIMENTO DO ATHLETIX
          ===================================================================== -->
-    <section class="section section--secondary" id="arquitetura" data-section-group="projetos" aria-labelledby="arquitetura-title">
+    <section class="section section--secondary" id="arquitetura" data-section-group="projetos" data-section-label="ARQUITETURA" aria-labelledby="arquitetura-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">04 / Arquitetura e desenvolvimento</span>
+            <span class="section-kicker">Camadas · Segurança RLS · Qualidade</span>
           </div>
           <div>
             <h2 class="section-title" id="arquitetura-title">Decisões técnicas, fluxo de dados e rigor de engenharia.</h2>
@@ -854,39 +962,60 @@
         </div>
 
         <div class="arch-layout">
-          <!-- Diagrama Visual Simplificado + Integrações Externas Separadas -->
-          <div class="arch-diagram" aria-label="Diagrama de arquitetura do ATHLETIX" data-reveal>
-            <div class="arch-diagram__header">Fluxo Principal da Arquitetura · ATHLETIX</div>
+          <!-- Explorador Interativo de Camadas -->
+          <div class="arch-diagram editorial-frame" aria-label="Explorador interativo da arquitetura do ATHLETIX" data-reveal>
+            <div class="arch-diagram__header">
+              <span>Fluxo Canônico · ATHLETIX</span>
+              <span>Clique em uma camada</span>
+            </div>
 
-            <div class="arch-flow">
-              <div class="arch-node">
-                <span class="arch-node__name">USUÁRIO</span>
-                <span class="arch-node__meta">Desktop · Mobile · PWA Instalável</span>
-              </div>
-              <div class="arch-arrow" aria-hidden="true">↓</div>
+            <div class="arch-flow" role="tablist" aria-label="Camadas da arquitetura do ATHLETIX">
+              <button type="button" class="arch-node" role="tab" data-arch-layer="client" aria-selected="true">
+                <span class="arch-node__num">01</span>
+                <span class="arch-node__body">
+                  <span class="arch-node__name">CLIENTE &amp; SHELL PWA</span>
+                  <span class="arch-node__meta">Desktop · Mobile 320px+ · Service Worker</span>
+                </span>
+              </button>
 
-              <div class="arch-node">
-                <span class="arch-node__name">INTERFACE REACT</span>
-                <span class="arch-node__meta">React 18 · TypeScript · Vite 6 · Zustand</span>
-              </div>
-              <div class="arch-arrow" aria-hidden="true">↓</div>
+              <button type="button" class="arch-node" role="tab" data-arch-layer="frontend" aria-selected="false">
+                <span class="arch-node__num">02</span>
+                <span class="arch-node__body">
+                  <span class="arch-node__name">INTERFACE REATIVA</span>
+                  <span class="arch-node__meta">React 18 · TypeScript strict · Vite 6 · Zustand</span>
+                </span>
+              </button>
 
-              <div class="arch-node">
-                <span class="arch-node__name">SERVIÇOS E VALIDAÇÕES</span>
-                <span class="arch-node__meta">Motor Determinístico · Schemas Zod · i18n</span>
-              </div>
-              <div class="arch-arrow" aria-hidden="true">↓</div>
+              <button type="button" class="arch-node" role="tab" data-arch-layer="domain" aria-selected="false">
+                <span class="arch-node__num">03</span>
+                <span class="arch-node__body">
+                  <span class="arch-node__name">DOMÍNIO &amp; CONTRATOS</span>
+                  <span class="arch-node__meta">Motor Determinístico · Schemas Zod · i18n</span>
+                </span>
+              </button>
 
-              <div class="arch-node arch-node--accent">
-                <span class="arch-node__name">SUPABASE</span>
-                <span class="arch-node__meta">Supabase Auth · Row Level Security · RPCs</span>
-              </div>
-              <div class="arch-arrow" aria-hidden="true">↓</div>
+              <button type="button" class="arch-node" role="tab" data-arch-layer="backend" aria-selected="false">
+                <span class="arch-node__num">04</span>
+                <span class="arch-node__body">
+                  <span class="arch-node__name">SUPABASE AUTH &amp; API</span>
+                  <span class="arch-node__meta">JWT / PKCE · Storage Privado · Vercel Functions</span>
+                </span>
+              </button>
 
-              <div class="arch-node arch-node--accent">
-                <span class="arch-node__name">POSTGRESQL</span>
-                <span class="arch-node__meta">Tabelas Relacionais · Transações Atômicas</span>
-              </div>
+              <button type="button" class="arch-node" role="tab" data-arch-layer="database" aria-selected="false">
+                <span class="arch-node__num">05</span>
+                <span class="arch-node__body">
+                  <span class="arch-node__name">POSTGRESQL 17 + RLS</span>
+                  <span class="arch-node__meta">23+ Tabelas · auth.uid() · RPCs Transacionais</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="arch-inspector" aria-live="polite">
+              <span class="arch-inspector__label" id="arch-inspector-label">INSPEÇÃO · CAMADA 01 (CLIENTE &amp; PWA)</span>
+              <p class="arch-inspector__text" id="arch-inspector-text">
+                Entrega instalável com manifesto web, precache otimizado de ativos estáticos, página offline dedicada e layout fluido sem overflow horizontal desde 320px.
+              </p>
             </div>
 
             <!-- Integrações Externas Representadas Separadamente -->
@@ -915,53 +1044,55 @@
 
           <!-- Stack Tecnológica do ATHLETIX por Camada -->
           <div class="arch-stack-groups" data-reveal>
-            <div class="arch-stack-box">
-              <h3 class="arch-stack-box__title">Frontend da Aplicação</h3>
+            <div class="arch-stack-box is-highlighted" data-arch-box="client frontend">
+              <h3 class="arch-stack-box__title">Frontend &amp; Experiência PWA</h3>
               <div class="arch-stack-box__tags">
                 <span class="mono-tag">React 18</span>
                 <span class="mono-tag">TypeScript (strict)</span>
                 <span class="mono-tag">Vite 6</span>
                 <span class="mono-tag">Zustand</span>
-                <span class="mono-tag">React Router</span>
+                <span class="mono-tag">React Router 7</span>
+                <span class="mono-tag">vite-plugin-pwa</span>
               </div>
             </div>
 
-            <div class="arch-stack-box">
-              <h3 class="arch-stack-box__title">Backend, Segurança e Dados</h3>
-              <div class="arch-stack-box__tags">
-                <span class="mono-tag">Supabase</span>
-                <span class="mono-tag">PostgreSQL</span>
-                <span class="mono-tag">Supabase Auth</span>
-                <span class="mono-tag">Row Level Security (RLS)</span>
-                <span class="mono-tag">Vercel Functions</span>
-              </div>
-            </div>
-
-            <div class="arch-stack-box">
-              <h3 class="arch-stack-box__title">Validação de Contratos</h3>
+            <div class="arch-stack-box" data-arch-box="domain">
+              <h3 class="arch-stack-box__title">Validação de Contratos &amp; Domínio</h3>
               <div class="arch-stack-box__tags">
                 <span class="mono-tag">Zod</span>
+                <span class="mono-tag">Motor Biomecânico Determinístico</span>
                 <span class="mono-tag">Catálogo Fechado por UUID</span>
+                <span class="mono-tag">i18n (pt-BR, en, es, fr)</span>
               </div>
             </div>
 
-            <div class="arch-stack-box">
-              <h3 class="arch-stack-box__title">Testes Automatizados</h3>
+            <div class="arch-stack-box" data-arch-box="backend">
+              <h3 class="arch-stack-box__title">Backend, Autenticação e Serverless</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">Supabase</span>
+                <span class="mono-tag">Supabase Auth (JWT/PKCE)</span>
+                <span class="mono-tag">Vercel Functions (/api/ai/*)</span>
+                <span class="mono-tag">APIs Externas com Timeout</span>
+              </div>
+            </div>
+
+            <div class="arch-stack-box" data-arch-box="database">
+              <h3 class="arch-stack-box__title">Persistência Relacional &amp; Segurança</h3>
+              <div class="arch-stack-box__tags">
+                <span class="mono-tag">PostgreSQL 17</span>
+                <span class="mono-tag">Row Level Security (RLS)</span>
+                <span class="mono-tag">RPC complete_workout_session</span>
+                <span class="mono-tag">RPC delete_own_account</span>
+              </div>
+            </div>
+
+            <div class="arch-stack-box" data-arch-box="client frontend domain backend database">
+              <h3 class="arch-stack-box__title">Verificação &amp; Qualidade Contínua</h3>
               <div class="arch-stack-box__tags">
                 <span class="mono-tag">Vitest</span>
-                <span class="mono-tag">Playwright</span>
-                <span class="mono-tag">PGlite (SQL/RLS em memória)</span>
+                <span class="mono-tag">Playwright + Chromium</span>
+                <span class="mono-tag">PGlite (SQL/RLS isolado)</span>
                 <span class="mono-tag">Testing Library</span>
-              </div>
-            </div>
-
-            <div class="arch-stack-box">
-              <h3 class="arch-stack-box__title">Outros Recursos Integrados</h3>
-              <div class="arch-stack-box__tags">
-                <span class="mono-tag">PWA Instalável</span>
-                <span class="mono-tag">APIs Externas com Timeout</span>
-                <span class="mono-tag">Integrações Nutricionais</span>
-                <span class="mono-tag">i18n (pt-BR, en, es, fr)</span>
               </div>
             </div>
           </div>
@@ -1031,7 +1162,7 @@
           </article>
         </div>
 
-        <!-- Limitações e Dependências Externas (Comunicação Obrigatória e Transparente) -->
+        <!-- Limitações e Dependências Externas -->
         <aside class="limits-panel" aria-labelledby="limits-title" data-reveal>
           <div class="limits-panel__head">
             <span class="limits-panel__eyebrow">Transparência de Engenharia · Estado de Configuração Externa</span>
@@ -1064,11 +1195,12 @@
     <!-- =====================================================================
          SEÇÃO 06 — TECNOLOGIAS E CONHECIMENTOS
          ===================================================================== -->
-    <section class="section" id="tecnologias" data-section-group="tecnologias" aria-labelledby="tecnologias-title">
+    <section class="section" id="tecnologias" data-section-group="tecnologias" data-section-label="TECNOLOGIAS" aria-labelledby="tecnologias-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">05 / Tecnologias</span>
+            <span class="section-kicker">Repertório Comprovado vs. Estudo</span>
           </div>
           <div>
             <h2 class="section-title" id="tecnologias-title">Linguagens, ferramentas e ecossistema de desenvolvimento.</h2>
@@ -1078,10 +1210,13 @@
           </div>
         </header>
 
-        <div class="filter-bar" role="toolbar" aria-label="Filtrar tecnologias por tipo de experiência" data-reveal>
-          <button type="button" class="filter-chip" data-tech-filter="all" aria-pressed="true">Todas as tecnologias</button>
-          <button type="button" class="filter-chip" data-tech-filter="applied" aria-pressed="false">Aplicação comprovada (ATHLETIX / Portfólio)</button>
-          <button type="button" class="filter-chip" data-tech-filter="study" aria-pressed="false">Em estudo e prática</button>
+        <div class="filter-toolbar-row" data-reveal>
+          <div class="filter-bar" role="toolbar" aria-label="Filtrar tecnologias por tipo de experiência">
+            <button type="button" class="filter-chip" data-tech-filter="all" aria-pressed="true">Todas (18)</button>
+            <button type="button" class="filter-chip" data-tech-filter="applied" aria-pressed="false">Aplicação comprovada (16)</button>
+            <button type="button" class="filter-chip" data-tech-filter="study" aria-pressed="false">Em estudo e prática (2)</button>
+          </div>
+          <span class="filter-count" id="tech-filter-count" aria-live="polite">Exibindo 18 de 18 tecnologias</span>
         </div>
 
         <div class="tech-groups" id="tech-groups">
@@ -1095,7 +1230,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/javascript.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/javascript.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">JavaScript (ES6+)</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
@@ -1106,7 +1241,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/typescript.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/typescript.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">TypeScript</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1117,7 +1252,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/html5.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/html5.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">HTML</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
@@ -1128,7 +1263,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/css3.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/css3.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">CSS</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
@@ -1139,7 +1274,7 @@
               <article class="tech-card" data-tech-kind="study">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/java.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/java.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Java</h4>
                   </div>
                   <span class="tech-badge tech-badge--study">Estudo e prática</span>
@@ -1150,7 +1285,7 @@
               <article class="tech-card" data-tech-kind="study">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/python.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/python.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Python</h4>
                   </div>
                   <span class="tech-badge tech-badge--study">Estudo e prática</span>
@@ -1170,7 +1305,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/react.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/react.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">React</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1181,7 +1316,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/vite.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/vite.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Vite</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1192,7 +1327,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/zustand.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/zustand.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Zustand &amp; PWA</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1212,7 +1347,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/supabase.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/supabase.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Supabase</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1223,7 +1358,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/nodejs.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/nodejs.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Node.js</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1234,7 +1369,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/zod.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/zod.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Zod</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1254,7 +1389,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/postgresql.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/postgresql.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">PostgreSQL</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1265,7 +1400,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/rls-shield.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/rls-shield.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Row Level Security (RLS)</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1285,7 +1420,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/git.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/git.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Git</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
@@ -1296,7 +1431,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/github.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/github.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">GitHub</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
@@ -1307,7 +1442,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/vercel.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/vercel.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Vercel</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
@@ -1327,7 +1462,7 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/vitest.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/vitest.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Vitest</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1338,18 +1473,18 @@
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/playwright.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/playwright.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">Playwright</h4>
                   </div>
-                  <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
+                  <span class="tech-badge tech-badge--applied">Portfólio &amp; ATHLETIX</span>
                 </div>
-                <p class="tech-card__desc">Testes ponta a ponta em Chromium verificando idiomas, persistência de séries, ausência de overflow de 320px a 1440px e temas.</p>
+                <p class="tech-card__desc">Testes ponta a ponta em Chromium verificando idiomas, persistência de séries, ausência de overflow de 320px a 1920px e temas.</p>
               </article>
 
               <article class="tech-card" data-tech-kind="applied">
                 <div class="tech-card__head">
                   <div class="tech-card__identity">
-                    <img class="tech-card__icon" src="assets/icons/pglite.svg" alt="" width="34" height="34" loading="lazy">
+                    <span class="tech-card__icon-box"><img class="tech-card__icon" src="assets/icons/pglite.svg" alt="" width="20" height="20" loading="lazy"></span>
                     <h4 class="tech-card__name">PGlite</h4>
                   </div>
                   <span class="tech-badge tech-badge--applied">Aplicado no ATHLETIX</span>
@@ -1365,11 +1500,12 @@
     <!-- =====================================================================
          SEÇÃO 07 — OUTROS PROJETOS (ESTRUTURA EXTENSÍVEL)
          ===================================================================== -->
-    <section class="section section--secondary" id="projetos" data-section-group="projetos" aria-labelledby="projetos-title">
+    <section class="section section--secondary" id="projetos" data-section-group="projetos" data-section-label="ACERVO" aria-labelledby="projetos-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">06 / Acervo de projetos</span>
+            <span class="section-kicker">Repositórios Verificados · Estrutura Escalável</span>
           </div>
           <div>
             <h2 class="section-title" id="projetos-title">Projetos publicados e estrutura para novos capítulos.</h2>
@@ -1380,7 +1516,6 @@
         </header>
 
         <div class="projects-archive" id="projects-archive" data-reveal>
-          <!-- Renderizado inicialmente em HTML semântico e sincronizado por PROJECTS_DATA em script.js -->
           <article class="project-featured">
             <div class="project-featured__media">
               <img
@@ -1453,16 +1588,17 @@
     <!-- =====================================================================
          SEÇÃO 08 — CONTATO
          ===================================================================== -->
-    <section class="section" id="contato" data-section-group="contato" aria-labelledby="contato-title">
+    <section class="section" id="contato" data-section-group="contato" data-section-label="CONTATO" aria-labelledby="contato-title">
       <div class="container">
         <header class="section-head" data-reveal>
-          <div>
+          <div class="section-index-wrap">
             <span class="section-index">07 / Contato</span>
+            <span class="section-kicker">Canais Diretos · Validador Local</span>
           </div>
           <div>
             <h2 class="section-title" id="contato-title">Canais abertos para conversas, feedback técnico e oportunidades.</h2>
             <p class="section-lead">
-              Entre em contato diretamente por e-mail, acompanhe meus repositórios públicos no GitHub ou utilize o validador de mensagem ao lado.
+              Entre em contato diretamente por e-mail, acompanhe meus repositórios públicos no GitHub ou prepare sua mensagem no formulário validado ao lado.
             </p>
           </div>
         </header>
@@ -1470,7 +1606,6 @@
         <div class="contact-grid">
           <!-- Canais Diretos -->
           <div class="contact-channels" data-reveal>
-            <!-- E-mail Profissional (Editável em DEVELOPER_CONFIG no script.js) -->
             <div class="channel-card">
               <span class="channel-card__label">E-mail profissional</span>
               <p class="channel-card__value" id="developer-email-display">ytalo6411@gmail.com</p>
@@ -1485,7 +1620,6 @@
               </div>
             </div>
 
-            <!-- GitHub -->
             <div class="channel-card">
               <span class="channel-card__label">GitHub oficial</span>
               <p class="channel-card__value">github.com/ytalo6411-art</p>
@@ -1501,58 +1635,80 @@
               </div>
             </div>
 
-            <!-- LinkedIn (Pendente de confirmação conforme especificação) -->
             <div class="channel-card">
               <span class="channel-card__label">LinkedIn</span>
               <p class="channel-card__value" id="linkedin-status-text">Endereço em confirmação</p>
-              <p style="font-size: 0.86rem; color: var(--text-secondary);">
-                O link oficial do perfil no LinkedIn será habilitado no objeto de configuração assim que o endereço definitivo for confirmado pelo desenvolvedor.
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                O link oficial será habilitado automaticamente em <code>DEVELOPER_CONFIG</code> assim que o endereço definitivo for confirmado pelo desenvolvedor.
               </p>
+            </div>
+
+            <div class="channel-card">
+              <span class="channel-card__label">Documentação de Direção de Arte</span>
+              <p class="channel-card__value">Referências Visuais (PDF A4)</p>
+              <div class="channel-card__actions">
+                <a
+                  class="btn btn--ghost btn--sm"
+                  href="docs/referencias-visuais.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Abrir documento A4 (1 página) ↗
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Formulário Validado com Comunicação Transparente -->
-          <form class="contact-form" id="contact-form" novalidate data-reveal>
-            <div class="subhead" style="margin-bottom: 0.25rem; padding-bottom: 0.85rem;">
-              <h3 class="subhead__title" style="font-size: 1.2rem;">Preparar mensagem</h3>
+          <form class="contact-form editorial-frame" id="contact-form" novalidate data-reveal>
+            <div class="subhead" style="margin-bottom: 0.1rem; padding-bottom: 0.8rem;">
+              <h3 class="subhead__title" style="font-size: 1.22rem;">Preparar mensagem</h3>
               <span class="subhead__meta">Validação local · Sem envio simulado</span>
             </div>
 
-            <div class="form-field">
-              <div class="form-field__label-row">
-                <label for="contact-name">Nome *</label>
+            <div class="form-row-2">
+              <div class="form-field">
+                <div class="form-field__label-row">
+                  <label for="contact-name">Nome *</label>
+                </div>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Seu nome completo"
+                  required
+                  aria-describedby="error-contact-name"
+                >
+                <span class="form-field__error" id="error-contact-name" role="alert"></span>
               </div>
-              <input
-                type="text"
-                id="contact-name"
-                name="name"
-                autocomplete="name"
-                placeholder="Seu nome completo"
-                required
-                aria-describedby="error-contact-name"
-              >
-              <span class="form-field__error" id="error-contact-name" role="alert"></span>
-            </div>
 
-            <div class="form-field">
-              <div class="form-field__label-row">
-                <label for="contact-email">E-mail *</label>
+              <div class="form-field">
+                <div class="form-field__label-row">
+                  <label for="contact-email">E-mail *</label>
+                </div>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="voce@exemplo.com"
+                  required
+                  aria-describedby="error-contact-email"
+                >
+                <span class="form-field__error" id="error-contact-email" role="alert"></span>
               </div>
-              <input
-                type="email"
-                id="contact-email"
-                name="email"
-                autocomplete="email"
-                placeholder="voce@exemplo.com"
-                required
-                aria-describedby="error-contact-email"
-              >
-              <span class="form-field__error" id="error-contact-email" role="alert"></span>
             </div>
 
             <div class="form-field">
               <div class="form-field__label-row">
                 <label for="contact-subject">Assunto *</label>
+                <span class="form-field__counter">Atalhos rápidos:</span>
+              </div>
+              <div class="subject-presets" aria-label="Sugestões rápidas de assunto">
+                <button type="button" class="preset-chip" data-subject-preset="Oportunidade / Estágio em Desenvolvimento">Estágio / Oportunidade</button>
+                <button type="button" class="preset-chip" data-subject-preset="Feedback técnico sobre o ATHLETIX">Feedback ATHLETIX</button>
+                <button type="button" class="preset-chip" data-subject-preset="Avaliação Acadêmica do Portfólio">Avaliação Acadêmica</button>
               </div>
               <input
                 type="text"
@@ -1625,6 +1781,7 @@
           <a href="#sobre">Sobre</a>
           <a href="#athletix">ATHLETIX</a>
           <a href="#tecnologias">Tecnologias</a>
+          <a href="docs/referencias-visuais.pdf" target="_blank" rel="noopener noreferrer">PDF A4 ↗</a>
           <a href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </nav>
         <p>&copy; 2026 Ytalo Gabriel de Lima Silva · Brasil</p>
@@ -1632,7 +1789,10 @@
     </div>
   </footer>
 
-  <!-- Botão Voltar ao Topo -->
+  <!-- Toast Acessível de Feedback -->
+  <div class="ui-toast" id="ui-toast" role="status" aria-live="polite"></div>
+
+  <!-- Botão Voltar ao Topo com Anel de Progresso -->
   <button
     type="button"
     class="back-to-top"
@@ -1640,23 +1800,30 @@
     aria-label="Voltar ao topo da página"
     title="Voltar ao topo"
   >
+    <svg class="back-to-top__ring" viewBox="0 0 48 48" aria-hidden="true">
+      <circle id="back-to-top-progress" cx="24" cy="24" r="22"></circle>
+    </svg>
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M12 19V5M5 12l7-7 7 7"></path>
     </svg>
   </button>
 
-  <!-- Modal Lightbox de Visualização Ampliada -->
+  <!-- Modal Lightbox de Visualização Ampliada com Filmstrip -->
   <dialog class="lightbox" id="image-lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-desc">
     <div class="lightbox__dialog">
       <div class="lightbox__header">
-        <span class="lightbox__counter" id="lightbox-counter">01 / 08</span>
+        <div class="lightbox__meta-left">
+          <span class="lightbox__counter" id="lightbox-counter">01 / 08</span>
+          <span class="lightbox__route" id="lightbox-route">/app/login · Desktop</span>
+        </div>
         <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Fechar visualização ampliada">
           Fechar [ESC]
         </button>
       </div>
-      <div class="lightbox__viewport">
+      <div class="lightbox__viewport" id="lightbox-viewport">
         <img id="lightbox-image" src="assets/projects/athletix-dashboard-desktop.jpg" alt="">
       </div>
+      <div class="lightbox__thumbs" id="lightbox-thumbs" aria-label="Miniaturas das capturas do ATHLETIX"></div>
       <div class="lightbox__footer">
         <div>
           <h3 class="lightbox__caption-title" id="lightbox-title">Título da captura</h3>
