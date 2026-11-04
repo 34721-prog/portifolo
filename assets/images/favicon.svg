@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ytalo Lima">
-  <rect width="64" height="64" rx="10" fill="#0B0D0C" stroke="#343B35" stroke-width="2"/>
-  <path d="M15 18h7.2l6.8 11.4L35.8 18H43L32.2 35.2V46h-6.4V35.2L15 18Z" fill="#F1F0E9"/>
-  <path d="M40 39.6h10V46H40z" fill="#C4F55A"/>
-  <circle cx="49" cy="19" r="3" fill="#9DE9CB"/>
+  <rect width="64" height="64" fill="#080907"/>
+  <rect x="1" y="1" width="62" height="62" fill="none" stroke="#454B41" stroke-width="2"/>
+  <path d="M15 18h7.2l6.8 11.4L35.8 18H43L32.2 35.2V46h-6.4V35.2L15 18Z" fill="#F1EEE3"/>
+  <path d="M40 39.6h10V46H40z" fill="#CDF564"/>
+  <circle cx="49" cy="19" r="3.4" fill="#F08A5D"/>
 </svg>

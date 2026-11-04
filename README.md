@@ -46,6 +46,7 @@ O portfólio combina quatro referências conceituais:
 ├── 404.html                       # Página de erro personalizada e acessível
 ├── styles.css                     # Sistema de design, temas escuro/claro e responsividade
 ├── script.js                      # Interatividade modular ES6+ e configuração centralizada
+├── motion.js                      # Camada de movimento: reveal escalonado, parallax, spotlight, trilho
 ├── vercel.json                    # Cabeçalhos de segurança, cache de ativos e cleanUrls
 ├── AGENTS.md                      # Diretrizes arquiteturais, convenções e regras do projeto
 ├── referencias.md                 # Análise detalhada das 4 referências visuais consultadas
@@ -53,7 +54,8 @@ O portfólio combina quatro referências conceituais:
 ├── funcionalidades.md             # Catálogo detalhado das 19 funcionalidades do portfólio
 ├── README.md                      # Documentação técnica e guia de manutenção/deploy
 ├── docs/
-│   └── referencias-visuais.pdf    # Documento A4 de página única ("Referências Visuais — Portfólio Ytalo Lima")
+│   ├── referencias-visuais.pdf    # Documento A4 de página única ("Referências Visuais — Portfólio Ytalo Lima")
+│   └── diagnostico-e-direcao.md   # Auditoria da versão anterior e direção de arte do redesign
 └── assets/
     ├── fonts/                     # Fontes variáveis WOFF2 auto-hospedadas (Space Grotesk, Manrope, JetBrains Mono)
     ├── icons/                     # 21 ícones vetoriais limpos das tecnologias e camadas
@@ -91,12 +93,12 @@ Este portfólio funciona de forma **100% independente** do ATHLETIX: todas as ca
 
 1. Menu fixo superior com navegação responsiva desktop e menu móvel retrátil (fecha automaticamente ao selecionar item, clicar fora ou pressionar `Escape`);
 2. Rolagem suave entre seções respeitando `scroll-margin-top` e `prefers-reduced-motion`;
-3. Animações discretas de entrada via `IntersectionObserver` com fallback imediato sem JS;
-4. Transições visuais editoriais entre seções;
-5. Modo escuro autoral (`#0B0D0C` + `#C4F55A`);
-6. Modo claro editorial completo (`#F4F3EC` + `#2D5B00`);
-7. Persistência de preferência de tema em `localStorage` (`ytalo_portfolio_theme`);
-8. Galeria interativa de 8 telas reais do ATHLETIX com filtro por contexto (`Todas`, `Interface Desktop`, `Fluxo Mobile`, `Treino`, `Nutrição & Evolução`);
+3. Revelação de conteúdo via `IntersectionObserver`, com escalonamento por item e fallback imediato sem JS;
+4. Camada de movimento própria (`motion.js`): revelação tipográfica mascarada no Hero, parallax discreto no painel técnico, luz de cursor e atração magnética em botões primários;
+5. Modo escuro autoral (`#080907` + `#CDF564`);
+6. Modo claro editorial completo (`#F3F0E6` + `#3B5A00`);
+7. Persistência de preferência de tema em `localStorage` (`ytalo-portfolio-theme`);
+8. Galeria interativa de 8 telas reais do ATHLETIX em folha de contato escalonada, com filtro por contexto (`Todas`, `Acesso & i18n`, `Treino & Catálogo`, `Nutrição & Evolução`, `Mobile 390px`);
 9. Lightbox / ampliação de imagem acessível (`<dialog>`) com navegação anterior/próxima, contador e atalhos de teclado (`Escape`, `←`, `→`);
 10. Microinterações táteis em botões, links e cartões;
 11. Formulário de contato com validação em tempo real de nome, e-mail, assunto e mensagem, comunicando honestamente que o site é estático e oferecendo cópia da mensagem revisada ou abertura no cliente de e-mail;
@@ -105,7 +107,9 @@ Este portfólio funciona de forma **100% independente** do ATHLETIX: todas as ca
 14. Barra superior de progresso de leitura da página calculada via `requestAnimationFrame`;
 15. Indicador automático de seção ativa no menu (`aria-current="true"`);
 16. Filtros interativos para as 18 funcionalidades do ATHLETIX, tecnologias (comprovadas vs. em estudo) e vitrine de outros projetos;
-17. Suporte integral a `prefers-reduced-motion: reduce`.
+17. Trilho lateral de leitura com coordenadas de seção e estado ativo sincronizado ao scroll (apenas em monitores ≥ 1600px, evitando colisão com o grid em notebooks);
+18. Faixa tipográfica editorial entre Hero e Sobre, pausada ao passar o ponteiro e desativada sem movimento;
+19. Suporte integral a `prefers-reduced-motion: reduce`.
 
 ---
 
