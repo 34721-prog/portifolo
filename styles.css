@@ -3748,6 +3748,10 @@ html[data-theme='light'] .tech-card__icon {
 
 /* Ajustes finos para telas sensíveis ao toque */
 @media (hover: none) {
+  .lightbox__close-hint {
+    display: none;
+  }
+
   .device-frame__zoom {
     opacity: 1;
     transform: none;
@@ -3901,6 +3905,27 @@ p,
   .stage-tabs {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lightbox__header {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .lightbox__meta-left {
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .lightbox__route {
+    display: none;
+  }
+
+  .lightbox__close {
+    flex: none;
+    min-height: 38px;
+    font-size: 0.5625rem;
   }
 
   .stage-tab {
