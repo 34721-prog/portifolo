@@ -28,7 +28,7 @@ Recursos indispensáveis para cumprir os objetivos pedagógicos, técnicos e com
 Recursos que elevam a qualidade de engenharia de produto, usabilidade e exploração do conteúdo:
 
 8. **Modo Escuro e Modo Claro com Persistência**
-   - Alternância imediata entre a paleta escura autoral (`#0B0D0C` / `#C4F55A`) e a paleta clara editorial (`#F4F3EC` / `#2F5E00`), salva em `localStorage` e aplicada antes da primeira pintura da página para evitar *flash* visual.
+   - Alternância imediata entre a paleta escura autoral (`#080907` / `#CDF564`) e a paleta clara editorial (`#F3F0E6` / `#3B5A00`), salva em `localStorage` e aplicada antes da primeira pintura da página para evitar *flash* visual.
 9. **Galeria Interativa de Capturas Reais do ATHLETIX**
    - Navegação por abas/categorias entre diferentes telas reais do ATHLETIX (Login multilíngue, Dashboard/Treinos, Biblioteca de 317 exercícios, Execução de sessão mobile com cronômetro, Nutrição e Evolução com gráficos SVG), atualizando contexto técnico e legendas documentais.
 10. **Visualização Ampliada de Imagens (Lightbox Acessível)**
@@ -38,7 +38,7 @@ Recursos que elevam a qualidade de engenharia de produto, usabilidade e explora�
 12. **Estrutura Extensível para Outros Projetos (`#projetos`)**
     - Acervo alimentado por estrutura de dados limpa em JavaScript (`PROJECTS_DATA`), destacando o ATHLETIX como projeto principal e preparando slots documentados para adição futura de novos projetos reais.
 13. **Filtro Interativo na Seção de Tecnologias e nas 18 Funcionalidades**
-    - Permite filtrar tecnologias por contexto (*Todas*, *Aplicadas no ATHLETIX*, *Em estudo*) e explorar os módulos funcionais do ATHLETIX (*Treinamento*, *Nutrição*, *Plataforma & Dados*) sem perder a visão completa.
+    - Permite filtrar as 20 tecnologias por comprovação prática (*Todas (20)*, *Comprovadas (18)*, *Em estudo (2)*) e explorar as 18 funcionalidades do ATHLETIX por módulo (*Treinamento*, *Nutrição*, *Plataforma & Dados*) sem perder a visão completa. A contagem exibida é recalculada em runtime a partir do próprio DOM.
 
 ---
 

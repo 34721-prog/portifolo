@@ -26,7 +26,7 @@ const DEVELOPER_CONFIG = {
 const ATHLETIX_SCREENS = [
   {
     src: 'assets/projects/athletix-login-desktop.jpg',
-    route: 'athletix-lilac.vercel.app/app/login — Acesso & 4 Idiomas',
+    route: '/app/login — Acesso & 4 Idiomas',
     shortBadge: '/app/login · Desktop',
     captionHtml:
       '<strong>Mockup Desktop · /app/login:</strong> tela pública oficial publicada na Vercel com troca ao vivo entre pt-BR, en, es e fr e verificação preventiva de Google OAuth.',
@@ -36,7 +36,7 @@ const ATHLETIX_SCREENS = [
   },
   {
     src: 'assets/projects/athletix-dashboard-desktop.jpg',
-    route: 'athletix-lilac.vercel.app/app — Painel do Atleta',
+    route: '/app — Painel do Atleta',
     shortBadge: '/app · Desktop',
     captionHtml:
       '<strong>Mockup Desktop · /app:</strong> painel inicial do ATHLETIX com objetivo ativo, sequência semanal, indicação transparente de plano gerado por regras e atalho direto de sessão.',
@@ -46,7 +46,7 @@ const ATHLETIX_SCREENS = [
   },
   {
     src: 'assets/projects/athletix-exercises-desktop.jpg',
-    route: 'athletix-lilac.vercel.app/app/exercises — 317 Exercícios',
+    route: '/app/exercises — 317 Exercícios',
     shortBadge: '/app/exercises · Catálogo',
     captionHtml:
       '<strong>Mockup Desktop · /app/exercises:</strong> catálogo com 317 exercícios semeados, busca com debounce de 350ms, filtros combinados e vídeo carregado sob demanda.',
@@ -56,7 +56,7 @@ const ATHLETIX_SCREENS = [
   },
   {
     src: 'assets/projects/athletix-workouts-desktop.jpg',
-    route: 'athletix-lilac.vercel.app/app/workouts — Divisão Semanal',
+    route: '/app/workouts — Divisão Semanal',
     shortBadge: '/app/workouts · Planos',
     captionHtml:
       '<strong>Mockup Desktop · /app/workouts:</strong> programa semanal agrupado por program_id com séries, repetições, justificativa biomecânica e histórico editável.',
@@ -66,7 +66,7 @@ const ATHLETIX_SCREENS = [
   },
   {
     src: 'assets/projects/athletix-nutrition-desktop.jpg',
-    route: 'athletix-lilac.vercel.app/app/nutrition — Nutrição & Água',
+    route: '/app/nutrition — Nutrição & Água',
     shortBadge: '/app/nutrition · Nutrição',
     captionHtml:
       '<strong>Mockup Desktop · /app/nutrition:</strong> sugestões visuais de refeições, separação rigorosa entre sugestão e consumo real, pesquisa de alimentos e meta hídrica.',
@@ -76,7 +76,7 @@ const ATHLETIX_SCREENS = [
   },
   {
     src: 'assets/projects/athletix-progress-desktop.jpg',
-    route: 'athletix-lilac.vercel.app/app/progress — Evolução SVG',
+    route: '/app/progress — Evolução SVG',
     shortBadge: '/app/progress · Gráficos SVG',
     captionHtml:
       '<strong>Mockup Desktop · /app/progress:</strong> gráfico vetorial de volume construído em SVG puro, consistência semanal, medidas e recordes pessoais.',
@@ -236,7 +236,7 @@ function initTheme() {
     document.documentElement.setAttribute('data-theme', resolved);
 
     if (metaTheme) {
-      metaTheme.setAttribute('content', resolved === 'light' ? '#F4F3EC' : '#0B0D0C');
+      metaTheme.setAttribute('content', resolved === 'light' ? '#F3F0E6' : '#080907');
     }
 
     if (toggleBtn && labelEl && sunIcon && moonIcon) {
@@ -487,7 +487,7 @@ function initHeroBlueprint() {
 function initStageSwitcher() {
   const desktopTabs = Array.from(document.querySelectorAll('[data-stage-desktop]'));
   const desktopImg = document.getElementById('stage-desktop-img');
-  const desktopUrl = document.getElementById('stage-desktop-url');
+  const desktopRoute = document.getElementById('stage-desktop-route');
   const desktopCaption = document.getElementById('stage-desktop-caption');
   const desktopTrigger = document.getElementById('stage-desktop-trigger');
 
@@ -506,7 +506,7 @@ function initStageSwitcher() {
         () => {
           desktopImg.src = item.src;
           desktopImg.alt = item.alt;
-          if (desktopUrl) desktopUrl.textContent = item.route;
+          if (desktopRoute) desktopRoute.textContent = item.route;
           if (desktopCaption) desktopCaption.innerHTML = item.captionHtml;
           if (desktopTrigger) desktopTrigger.setAttribute('data-lightbox-index', String(idx));
           desktopImg.classList.remove('is-swapping');

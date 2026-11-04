@@ -43,6 +43,7 @@ portfolio/
 ├── 404.html                    # Página de erro personalizada e acessível
 ├── styles.css                  # Sistema visual, tokens, layout editorial e responsividade
 ├── script.js                   # Dados estruturados, interações, tema, galeria e validação
+├── motion.js                   # Movimento e microinterações (reveal, parallax, spotlight, trilho)
 ├── vercel.json                 # Configuração de cabeçalhos de segurança e rotas para deploy
 ├── assets/
 │   ├── images/                 # Favicon, Open Graph e composições gráficas autorais
@@ -50,7 +51,8 @@ portfolio/
 │   ├── icons/                  # Ícones vetoriais SVG das tecnologias e interface
 │   └── fonts/                  # Arquivos WOFF2 variáveis (Space Grotesk, Manrope, JetBrains Mono)
 └── docs/
-    └── referencias-visuais.pdf # Documento escolar A4 de página única
+    ├── referencias-visuais.pdf # Documento escolar A4 de página única
+    └── diagnostico-e-direcao.md # Auditoria e direção de arte do redesign v3
 ```
 
 ---

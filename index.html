@@ -7,7 +7,8 @@
   <meta name="description" content="Portfólio profissional de Ytalo Gabriel de Lima Silva (Ytalo Lima), desenvolvedor de software em formação. Conheça sua trajetória, repertório técnico e o estudo de caso completo da plataforma esportiva ATHLETIX.">
   <meta name="author" content="Ytalo Gabriel de Lima Silva">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0B0D0C" id="meta-theme-color">
+  <meta name="theme-color" content="#080907" id="meta-theme-color">
+  <meta name="color-scheme" content="dark light">
 
   <!-- Open Graph / Compartilhamento -->
   <meta property="og:type" content="website">
@@ -24,6 +25,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 
   <!-- Inicialização imediata do tema para evitar flash visual -->
@@ -60,21 +62,11 @@
       </a>
 
       <nav class="site-nav" aria-label="Navegação principal">
-        <a class="site-nav__link" href="#inicio" data-nav-target="inicio" aria-current="true">
-          <span class="site-nav__num" aria-hidden="true">01</span>Início
-        </a>
-        <a class="site-nav__link" href="#sobre" data-nav-target="sobre">
-          <span class="site-nav__num" aria-hidden="true">02</span>Sobre
-        </a>
-        <a class="site-nav__link" href="#athletix" data-nav-target="projetos">
-          <span class="site-nav__num" aria-hidden="true">03</span>Projetos
-        </a>
-        <a class="site-nav__link" href="#tecnologias" data-nav-target="tecnologias">
-          <span class="site-nav__num" aria-hidden="true">04</span>Tecnologias
-        </a>
-        <a class="site-nav__link" href="#contato" data-nav-target="contato">
-          <span class="site-nav__num" aria-hidden="true">05</span>Contato
-        </a>
+        <a class="site-nav__link" href="#inicio" data-nav-target="inicio" aria-current="true">Início</a>
+        <a class="site-nav__link" href="#sobre" data-nav-target="sobre">Sobre</a>
+        <a class="site-nav__link" href="#athletix" data-nav-target="projetos">Projetos</a>
+        <a class="site-nav__link" href="#tecnologias" data-nav-target="tecnologias">Tecnologias</a>
+        <a class="site-nav__link" href="#contato" data-nav-target="contato">Contato</a>
       </nav>
 
       <div class="header-actions">
@@ -139,6 +131,21 @@
     </div>
   </nav>
 
+  <!-- Trilho lateral de leitura (apenas telas amplas) -->
+  <nav class="rail-index" id="rail-index" aria-label="Índice lateral do documento">
+    <span class="rail-index__title" aria-hidden="true">ÍNDICE</span>
+    <ol class="rail-index__list">
+      <li><a class="rail-index__link" href="#inicio" data-rail-target="inicio"><span class="rail-index__num">00</span><span class="rail-index__text">Início</span></a></li>
+      <li><a class="rail-index__link" href="#sobre" data-rail-target="sobre"><span class="rail-index__num">01</span><span class="rail-index__text">Sobre</span></a></li>
+      <li><a class="rail-index__link" href="#trajetoria" data-rail-target="sobre"><span class="rail-index__num">02</span><span class="rail-index__text">Trajetória</span></a></li>
+      <li><a class="rail-index__link" href="#athletix" data-rail-target="projetos"><span class="rail-index__num">03</span><span class="rail-index__text">ATHLETIX</span></a></li>
+      <li><a class="rail-index__link" href="#arquitetura" data-rail-target="projetos"><span class="rail-index__num">04</span><span class="rail-index__text">Arquitetura</span></a></li>
+      <li><a class="rail-index__link" href="#tecnologias" data-rail-target="tecnologias"><span class="rail-index__num">05</span><span class="rail-index__text">Tecnologias</span></a></li>
+      <li><a class="rail-index__link" href="#projetos" data-rail-target="projetos"><span class="rail-index__num">06</span><span class="rail-index__text">Acervo</span></a></li>
+      <li><a class="rail-index__link" href="#contato" data-rail-target="contato"><span class="rail-index__num">07</span><span class="rail-index__text">Contato</span></a></li>
+    </ol>
+  </nav>
+
   <main id="conteudo-principal">
     <!-- =====================================================================
          SEÇÃO 01 — HERO / APRESENTAÇÃO INICIAL
@@ -149,21 +156,28 @@
           <div class="hero__content" data-reveal>
             <div class="hero__eyebrow">
               <span class="hero__pulse" aria-hidden="true"></span>
-              <span>Portfólio Autoral · Brasil</span>
-              <span>·</span>
-              <span>HTML5 / CSS3 / JS ES6+</span>
+              <span>Portfólio autoral · Brasil</span>
+              <span><span class="hero__eyebrow-dot" aria-hidden="true">·</span> HTML5 · CSS3 · JS ES6+</span>
             </div>
 
-            <h1 class="hero__title" id="hero-title">YTALO LIMA<span class="hero__title-dot" aria-hidden="true">.</span></h1>
-            <p class="hero__role">Desenvolvedor de software em formação</p>
+            <h1 class="hero__title" id="hero-title" aria-label="Ytalo Lima">
+              <span class="hero__line"><span class="hero__line-inner">YTALO</span></span>
+              <span class="hero__line"><span class="hero__line-inner">LIMA<span class="hero__title-dot" aria-hidden="true">.</span></span></span>
+            </h1>
 
-            <p class="hero__manifesto">
-              &ldquo;Transformando curiosidade em tecnologia, ideias em sistemas e aprendizado em projetos reais.&rdquo;
-            </p>
+            <div class="hero__meta">
+              <p class="hero__role">Desenvolvedor de software em formação</p>
+              <p class="hero__locale">Brasil <span aria-hidden="true">/</span> pt-BR</p>
+            </div>
 
-            <p class="hero__description">
-              Desenvolvo aplicações e experiências digitais, explorando programação, arquitetura de software, bancos de dados e tecnologias modernas.
-            </p>
+            <div class="hero__narrative">
+              <p class="hero__manifesto">
+                &ldquo;Transformando curiosidade em tecnologia, ideias em sistemas e aprendizado em projetos reais.&rdquo;
+              </p>
+              <p class="hero__description">
+                Desenvolvo aplicações e experiências digitais, explorando programação, arquitetura de software, bancos de dados e tecnologias modernas.
+              </p>
+            </div>
 
             <div class="hero__actions">
               <a class="btn btn--primary" href="#athletix">
@@ -191,7 +205,8 @@
                   <path d="M15 21v-3.5a3.2 3.2 0 0 0-.9-2.5c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.3-3.5 4.6 4.6 0 0 0-.1-3.4s-1.1-.3-3.6 1.3a12.3 12.3 0 0 0-6.2 0C6.4 1.3 5.3 1.6 5.3 1.6a4.6 4.6 0 0 0-.1 3.4A5 5 0 0 0 3.9 8.5c0 5 3 6.2 6 6.5a3.2 3.2 0 0 0-.9 2.5V21"></path>
                   <path d="M9 18c-4 1.4-4-2-6-2"></path>
                 </svg>
-                <span>github.com/ytalo6411-art ↗</span>
+                <span>github.com/ytalo6411-art</span>
+                <span class="hero__github-arrow" aria-hidden="true">↗</span>
               </a>
 
               <a
@@ -204,22 +219,22 @@
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                   <path d="M14 2v6h6M16 13H8M16 17H8"></path>
                 </svg>
-                <span>Dossiê de Referências (PDF A4) ↗</span>
+                <span>Dossiê de referências (PDF A4)</span>
+                <span class="hero__github-arrow" aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
 
-          <!-- Composição Visual Autoral Interativa (Sem rosto fictício) -->
-          <aside class="hero-construct editorial-frame" aria-label="Diagrama interativo de engenharia em camadas" data-reveal>
+          <aside class="hero-construct editorial-frame" aria-label="Diagrama interativo de engenharia em camadas" data-reveal data-parallax="0.5">
             <div class="hero-construct__bar">
               <span>ARQUITETURA.SYS // INSPECIONÁVEL</span>
               <span>CLIQUE NAS CAMADAS</span>
             </div>
 
             <div class="hero-construct__tabs" role="tablist" aria-label="Selecionar camada arquitetural">
-              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="0" aria-selected="true">01 · Interface</button>
-              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="1" aria-selected="false">02 · Contratos</button>
-              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="2" aria-selected="false">03 · Dados &amp; RLS</button>
+              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="0" aria-selected="true" aria-controls="hero-readout">01 · Interface</button>
+              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="1" aria-selected="false" aria-controls="hero-readout">02 · Contratos</button>
+              <button type="button" class="blueprint-tab" role="tab" data-blueprint-tab="2" aria-selected="false" aria-controls="hero-readout">03 · Dados &amp; RLS</button>
             </div>
 
             <div class="hero-construct__canvas">
@@ -270,7 +285,7 @@
               </svg>
             </div>
 
-            <div class="hero-construct__readout" aria-live="polite">
+            <div class="hero-construct__readout" id="hero-readout" role="tabpanel" aria-live="polite">
               <span class="hero-construct__readout-label" id="hero-readout-label">CAMADA 01 · INTERFACE &amp; ACESSIBILIDADE</span>
               <p class="hero-construct__readout-text" id="hero-readout-text">
                 Semântica HTML5, responsividade testada de 320px a 1920px, temas escuro/claro e navegação acessível por teclado neste portfólio e no ATHLETIX.
@@ -311,11 +326,43 @@
             <a class="quick-jump" href="#athletix"><span>03</span> ATHLETIX</a>
             <a class="quick-jump" href="#arquitetura"><span>04</span> Arquitetura</a>
             <a class="quick-jump" href="#tecnologias"><span>05</span> Stack</a>
+            <a class="quick-jump" href="#projetos"><span>06</span> Acervo</a>
             <a class="quick-jump" href="#contato"><span>07</span> Contato</a>
           </nav>
         </div>
       </div>
     </section>
+
+
+    <!-- Faixa tipográfica editorial · respiro entre abertura e narrativa -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__group">
+          <span>HTML5 semântico</span><span class="ticker__dot">·</span>
+          <span>CSS3 · design system</span><span class="ticker__dot">·</span>
+          <span>JavaScript ES6+</span><span class="ticker__dot">·</span>
+          <span>TypeScript strict</span><span class="ticker__dot">·</span>
+          <span>React 18</span><span class="ticker__dot">·</span>
+          <span>PostgreSQL</span><span class="ticker__dot">·</span>
+          <span>Row Level Security</span><span class="ticker__dot">·</span>
+          <span>Vitest · Playwright</span><span class="ticker__dot">·</span>
+          <span>Acessibilidade WCAG</span><span class="ticker__dot">·</span>
+          <span>PWA instalável</span><span class="ticker__dot">·</span>
+        </span>
+        <span class="ticker__group">
+          <span>HTML5 semântico</span><span class="ticker__dot">·</span>
+          <span>CSS3 · design system</span><span class="ticker__dot">·</span>
+          <span>JavaScript ES6+</span><span class="ticker__dot">·</span>
+          <span>TypeScript strict</span><span class="ticker__dot">·</span>
+          <span>React 18</span><span class="ticker__dot">·</span>
+          <span>PostgreSQL</span><span class="ticker__dot">·</span>
+          <span>Row Level Security</span><span class="ticker__dot">·</span>
+          <span>Vitest · Playwright</span><span class="ticker__dot">·</span>
+          <span>Acessibilidade WCAG</span><span class="ticker__dot">·</span>
+          <span>PWA instalável</span><span class="ticker__dot">·</span>
+        </span>
+      </div>
+    </div>
 
     <!-- =====================================================================
          SEÇÃO 02 — SOBRE MIM
@@ -325,7 +372,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">01 / Sobre mim</span>
-            <span class="section-kicker">Perfil · Valores · Visão de Sistemas</span>
+            <span class="section-kicker">Perfil, valores, visão de sistemas</span>
           </div>
           <div>
             <h2 class="section-title" id="sobre-title">Curiosidade transformada em disciplina de construção.</h2>
@@ -413,7 +460,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">02 / Trajetória</span>
-            <span class="section-kicker">Marcos Reais · Método de Trabalho</span>
+            <span class="section-kicker">Marcos reais, método de trabalho</span>
           </div>
           <div>
             <h2 class="section-title" id="trajetoria-title">Do primeiro código ao desenvolvimento de sistemas completos.</h2>
@@ -507,7 +554,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">03 / Projeto principal</span>
-            <span class="section-kicker">Estudo de Caso Completo · Produto &amp; Código</span>
+            <span class="section-kicker">Estudo de caso completo: produto e código</span>
           </div>
           <div>
             <h2 class="section-title" id="athletix-title">ATHLETIX — Estudo de caso de engenharia de software.</h2>
@@ -536,6 +583,8 @@
             </div>
 
             <div class="case-banner__actions">
+              <span class="case-banner__actions-label">Acesso direto · aplicação publicada e código-fonte</span>
+              <div class="case-banner__actions-buttons">
               <a
                 class="btn btn--primary"
                 href="https://athletix-lilac.vercel.app"
@@ -558,6 +607,7 @@
                   <path d="M7 17L17 7M9 7h8v8"></path>
                 </svg>
               </a>
+              </div>
             </div>
           </div>
 
@@ -620,7 +670,7 @@
             <figure class="device-frame">
               <div class="device-frame__chrome">
                 <span class="device-frame__dots" aria-hidden="true"><span></span><span></span><span></span></span>
-                <span class="device-frame__url" id="stage-desktop-url">athletix-lilac.vercel.app/app — Painel do Atleta</span>
+                <span class="device-frame__url" id="stage-desktop-url"><span class="device-frame__origin">athletix-lilac.vercel.app</span><span class="device-frame__route" id="stage-desktop-route">/app — Painel do Atleta</span></span>
                 <span>PT-BR</span>
               </div>
               <button
@@ -638,7 +688,7 @@
                   height="900"
                   loading="eager"
                 >
-                <span class="device-frame__zoom">Ampliar em alta resolução ↗</span>
+                <span class="device-frame__zoom" aria-hidden="true">Ampliar ↗</span>
               </button>
               <figcaption class="device-frame__caption" id="stage-desktop-caption">
                 <strong>Mockup Desktop · /app:</strong> painel inicial do ATHLETIX com objetivo ativo, sequência semanal, indicação transparente de plano gerado por regras e atalho direto de sessão.
@@ -944,7 +994,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">04 / Arquitetura e desenvolvimento</span>
-            <span class="section-kicker">Camadas · Segurança RLS · Qualidade</span>
+            <span class="section-kicker">Camadas, segurança RLS, qualidade</span>
           </div>
           <div>
             <h2 class="section-title" id="arquitetura-title">Decisões técnicas, fluxo de dados e rigor de engenharia.</h2>
@@ -1200,7 +1250,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">05 / Tecnologias</span>
-            <span class="section-kicker">Repertório Comprovado vs. Estudo</span>
+            <span class="section-kicker">Repertório comprovado vs. estudo</span>
           </div>
           <div>
             <h2 class="section-title" id="tecnologias-title">Linguagens, ferramentas e ecossistema de desenvolvimento.</h2>
@@ -1212,11 +1262,11 @@
 
         <div class="filter-toolbar-row" data-reveal>
           <div class="filter-bar" role="toolbar" aria-label="Filtrar tecnologias por tipo de experiência">
-            <button type="button" class="filter-chip" data-tech-filter="all" aria-pressed="true">Todas (18)</button>
-            <button type="button" class="filter-chip" data-tech-filter="applied" aria-pressed="false">Aplicação comprovada (16)</button>
-            <button type="button" class="filter-chip" data-tech-filter="study" aria-pressed="false">Em estudo e prática (2)</button>
+            <button type="button" class="filter-chip" data-tech-filter="all" aria-pressed="true">Todas (20)</button>
+            <button type="button" class="filter-chip" data-tech-filter="applied" aria-pressed="false">Comprovadas (18)</button>
+            <button type="button" class="filter-chip" data-tech-filter="study" aria-pressed="false">Em estudo (2)</button>
           </div>
-          <span class="filter-count" id="tech-filter-count" aria-live="polite">Exibindo 18 de 18 tecnologias</span>
+          <span class="filter-count" id="tech-filter-count" aria-live="polite">Exibindo 20 de 20 tecnologias</span>
         </div>
 
         <div class="tech-groups" id="tech-groups">
@@ -1505,7 +1555,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">06 / Acervo de projetos</span>
-            <span class="section-kicker">Repositórios Verificados · Estrutura Escalável</span>
+            <span class="section-kicker">Repositórios verificados, estrutura escalável</span>
           </div>
           <div>
             <h2 class="section-title" id="projetos-title">Projetos publicados e estrutura para novos capítulos.</h2>
@@ -1552,7 +1602,7 @@
             <div class="future-slot__head">
               <div>
                 <span class="mono-tag">ESTRUTURA EXTENSÍVEL PRONTA</span>
-                <h3 class="future-slot__title" style="margin-top: 0.5rem;">Espaço reservado para próximos projetos reais</h3>
+                <h3 class="future-slot__title">Espaço reservado para próximos projetos reais</h3>
               </div>
               <button
                 type="button"
@@ -1593,7 +1643,7 @@
         <header class="section-head" data-reveal>
           <div class="section-index-wrap">
             <span class="section-index">07 / Contato</span>
-            <span class="section-kicker">Canais Diretos · Validador Local</span>
+            <span class="section-kicker">Canais diretos, validador local</span>
           </div>
           <div>
             <h2 class="section-title" id="contato-title">Canais abertos para conversas, feedback técnico e oportunidades.</h2>
@@ -1638,7 +1688,7 @@
             <div class="channel-card">
               <span class="channel-card__label">LinkedIn</span>
               <p class="channel-card__value" id="linkedin-status-text">Endereço em confirmação</p>
-              <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              <p class="channel-card__note">
                 O link oficial será habilitado automaticamente em <code>DEVELOPER_CONFIG</code> assim que o endereço definitivo for confirmado pelo desenvolvedor.
               </p>
             </div>
@@ -1661,8 +1711,8 @@
 
           <!-- Formulário Validado com Comunicação Transparente -->
           <form class="contact-form editorial-frame" id="contact-form" novalidate data-reveal>
-            <div class="subhead" style="margin-bottom: 0.1rem; padding-bottom: 0.8rem;">
-              <h3 class="subhead__title" style="font-size: 1.22rem;">Preparar mensagem</h3>
+            <div class="subhead subhead--compact">
+              <h3 class="subhead__title subhead__title--form">Preparar mensagem</h3>
               <span class="subhead__meta">Validação local · Sem envio simulado</span>
             </div>
 
@@ -1714,7 +1764,7 @@
                 type="text"
                 id="contact-subject"
                 name="subject"
-                placeholder="Ex.: Oportunidade de estágio, projeto ou avaliação"
+                placeholder="Ex.: Estágio, projeto ou avaliação"
                 required
                 aria-describedby="error-contact-subject"
               >
@@ -1737,7 +1787,7 @@
               <span class="form-field__error" id="error-contact-message" role="alert"></span>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+            <div class="form-actions">
               <button type="submit" class="btn btn--primary">
                 <span>Validar mensagem</span>
               </button>
@@ -1838,5 +1888,6 @@
   </dialog>
 
   <script src="script.js" defer></script>
+  <script src="motion.js" defer></script>
 </body>
 </html>

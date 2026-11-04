@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 · Página não encontrada — Portfólio Ytalo Lima</title>
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#080907">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
       try {
+        document.documentElement.classList.add('js-enabled');
         var saved = localStorage.getItem('ytalo-portfolio-theme');
         if (saved === 'light' || saved === 'dark') {
           document.documentElement.setAttribute('data-theme', saved);
@@ -19,20 +21,30 @@
   </script>
 </head>
 <body>
-  <main class="hero" style="min-height: 100svh; padding-top: 2.5rem;">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <main class="error-page" id="conteudo">
     <div class="container">
-      <div class="case-banner editorial-frame" style="max-width: 780px; margin-bottom: 0;">
-        <div class="case-banner__top">
-          <span class="section-index">ERRO 404 · ROTA INEXISTENTE</span>
-          <span class="mono-tag">YTALO LIMA · PORTFÓLIO</span>
+      <div class="error-page__inner">
+        <div class="error-topbar">
+          <a class="error-topbar__brand" href="/">Ytalo Lima<span aria-hidden="true">.</span></a>
+          <span class="error-topbar__meta">Portfólio · Engenharia &amp; Produto Digital</span>
         </div>
-        <h1 class="section-title" style="margin-bottom: 1rem;">Página não encontrada.</h1>
-        <p class="hero__description" style="margin-bottom: 1.75rem;">
-          O endereço solicitado não corresponde a nenhuma seção publicada neste portfólio. Utilize os atalhos abaixo para retornar à apresentação principal ou ir diretamente ao estudo de caso do ATHLETIX.
+        <span class="section-index">Erro 404 · rota inexistente</span>
+        <p class="error-page__code" aria-hidden="true">404</p>
+        <h1 class="error-page__title">Página não encontrada.</h1>
+        <p class="error-page__text">
+          O endereço solicitado não corresponde a nenhuma seção publicada neste portfólio. Use os atalhos abaixo para retornar à apresentação principal ou ir diretamente ao estudo de caso do ATHLETIX.
         </p>
-        <div class="hero__actions" style="margin-bottom: 0;">
-          <a class="btn btn--primary" href="index.html">Voltar ao portfólio principal</a>
-          <a class="btn btn--secondary" href="index.html#athletix">Ir direto ao caso ATHLETIX</a>
+        <div class="error-page__actions">
+          <a class="btn btn--primary" href="/">Voltar ao portfólio</a>
+          <a class="btn btn--secondary" href="/#athletix">Ir ao caso ATHLETIX</a>
+        </div>
+        <div class="error-page__meta">
+          <span>Português (pt-BR)</span>
+          <a href="/#tecnologias">Tecnologias</a>
+          <a href="/#contato">Contato</a>
+          <a href="https://github.com/ytalo6411-art" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </div>
     </div>

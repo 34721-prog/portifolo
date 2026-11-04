@@ -40,37 +40,64 @@ A narrativa pessoal de Ytalo Lima estrutura-se sobre fatos reais e valores genu�
 
 ## 4. Sistema de Identidade Visual
 
-### 4.1 Paleta de Cores — Tema Escuro (Padrão)
+### 4.1 Conceito visual — OFÍCIO
+
+O sistema visual (v3) parte de um documento de engenharia impresso: papel, tinta, réguas de 1px, marcas de corte e coordenadas de seção. O objetivo é que a identidade seja reconhecível sem o nome do portfólio: tipografia industrial em escala generosa, assimetria editorial, cantos retos e um único sinal de cor forte por bloco.
+
+### 4.2 Paleta de Cores — Tema Escuro (Padrão)
+
 | Token | Hexadecimal | Aplicação |
 |---|---|---|
-| `--bg-primary` | `#0B0D0C` | Fundo principal da página |
-| `--bg-secondary` | `#141815` | Seções alternadas e áreas de leitura técnica |
-| `--surface` | `#1C231E` | Superfícies de módulos, mockups, diagramas e diálogos |
-| `--text-primary` | `#F1F0E9` | Títulos, chamadas principais e textos de destaque |
-| `--text-secondary` | `#A1A69E` | Parágrafos explicativos, legendas e apoio |
-| `--accent-primary` | `#C4F55A` | Botões primários, indicadores ativos, métricas verificadas |
-| `--accent-alt` | `#9DE9CB` | Destaques secundários, tags de arquitetura e estados informativos |
-| `--border-line` | `#343B35` | Linhas editoriais finas (`1px`), grades e divisores |
+| `--bg` | `#080907` | Fundo do documento |
+| `--bg-alt` | `#0D0F0C` | Seções alternadas |
+| `--surface` | `#131612` | Painéis, mockups, formulários e diálogos |
+| `--ink` | `#F1EEE3` | Texto principal e títulos |
+| `--ink-2` | `#B6B9AC` | Parágrafos e apoio |
+| `--ink-3` | `#8D9285` | Legendas e metadados (≥ 5:1) |
+| `--accent` | `#CDF564` | Sinal: ação, foco, estado ativo, verificação |
+| `--accent-text` | `#CDF564` | Texto em cor de destaque sobre o fundo escuro |
+| `--mark` | `#F08A5D` | Brasa: narrativa humana, coordenadas, citações |
+| `--line-color` | `#2A2F28` | Réguas e divisores |
+| `--line-strong` | `#454B41` | Contornos de painéis e controles |
 
-### 4.2 Paleta de Cores — Tema Claro (Editorial Papel Quente)
+### 4.3 Paleta de Cores — Tema Claro (Papel Quente)
+
 | Token | Hexadecimal | Aplicação |
 |---|---|---|
-| `--bg-primary` | `#F4F3EC` | Fundo principal claro sem ofuscamento excessivo |
-| `--bg-secondary` | `#EAE8DF` | Fundo secundário para contraste de seção |
-| `--surface` | `#FCFBF7` | Superfícies de painéis, formulários e cartões técnicos |
-| `--text-primary` | `#111613` | Texto principal de altíssimo contraste |
-| `--text-secondary` | `#49524C` | Texto secundário com contraste acessível WCAG AA |
-| `--accent-primary` | `#2F5E00` | Verde técnico escuro para leitura acessível sobre fundo claro (combinado a detalhes `#C4F55A` sobre superfícies escuras) |
-| `--accent-alt` | `#0F5C48` | Destaque alternativo em esmeralda profundo |
-| `--border-line` | `#CFD4CC` | Divisores e bordas sutis |
+| `--bg` | `#F3F0E6` | Papel principal |
+| `--bg-alt` | `#EAE6D8` | Seções alternadas |
+| `--surface` | `#FBF9F2` | Superfícies de painéis e formulários |
+| `--ink` | `#14160F` | Texto principal |
+| `--ink-2` | `#4E5348` | Parágrafos |
+| `--ink-3` | `#64695C` | Metadados |
+| `--accent` | `#CDF564` | Preenchimentos de ação (texto escuro por cima) |
+| `--accent-text` | `#3B5A00` | Verde técnico legível sobre papel |
+| `--mark` | `#A03D14` | Brasa editorial em contraste AA |
+| `--line-color` | `#D2CCBC` | Réguas |
+| `--line-strong` | `#A9A291` | Contornos |
 
-### 4.3 Uso de Gradientes
-- Aplicados **apenas** em composições pontuais (atmosfera luminosa sutil na abertura do Hero e transição para o estudo de caso do ATHLETIX), preservando superfícies sólidas e limpas no restante do site.
+A cor tem função, não decoração: **verde-sinal** indica sistema, ação e dado verificado; **brasa** indica a narrativa humana (trajetória, família, contato). Gradientes existem apenas como atmosfera reativa do Hero.
 
-### 4.4 Tipografia
-- **Títulos (`--font-display`)**: `Space Grotesk` (pesos 500 a 700) — escala expressiva, tracking levemente negativo em grandes títulos e forte presença geométrica.
-- **Corpo (`--font-sans`)**: `Manrope` (pesos 400 a 700) — leitura confortável em textos longos, descrições de arquitetura e formulários.
-- **Identificações Técnicas (`--font-mono`)**: `JetBrains Mono` (pesos 400 a 600) — numeração de seções, etiquetas de stack, esquemas de rotas, tabelas e diagramas.
+### 4.4 Tipografia e Escala
+
+- **Títulos (`--font-display`)**: `Space Grotesk` 500/600, tracking `-0.035em`, escala fluida de `2.1rem` a `10.5rem` no nome do Hero.
+- **Corpo (`--font-sans`)**: `Manrope` 400/500, medida máxima de 68 caracteres.
+- **Metadados (`--font-mono`)**: `JetBrains Mono` 400/500, caixa alta, tracking `0.14em`, sempre em tamanho pequeno e com função (coordenada, rota, estado).
+- Escala tokenizada em `--fs-0` … `--fs-7`, `--fs-hero`, sem tamanhos avulsos.
+
+### 4.5 Grid, Espaço e Forma
+
+- Grid editorial de 12 colunas, contêiner de 1440px e gutter `clamp(1.25rem, 4vw, 3.5rem)`.
+- Base de espaçamento em 4px; seções com `clamp(4rem, 8vw, 8.5rem)`.
+- Cantos retos (0–2px), bordas de 1px e marcas de corte nos painéis. Sem sombras decorativas e sem *glassmorphism*.
+- Breakpoints reduzidos a cinco (640, 860, 940, 1080, 1280) mais ajustes de toque.
+
+### 4.6 Movimento
+
+- Revelação mascarada do nome no Hero e revelação de blocos por `IntersectionObserver` com atraso escalonado.
+- Parallax de até 22px no painel técnico, luz de cursor no Hero e atração de 3px em botões primários — somente em ponteiro fino.
+- Uma faixa tipográfica em movimento entre Hero e Sobre, pausada ao passar o ponteiro.
+- Tudo em `transform`/`opacity`, sem bibliotecas, e completamente desligado em `prefers-reduced-motion: reduce`.
 
 ---
 

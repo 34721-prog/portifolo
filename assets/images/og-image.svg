@@ -1,38 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Portfólio de Ytalo Lima — Engenharia de Software e Estudo de Caso ATHLETIX">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Portfólio de Ytalo Lima — engenharia de software e estudo de caso ATHLETIX">
   <defs>
-    <radialGradient id="glow" cx="78%" cy="22%" r="60%">
-      <stop offset="0%" stop-color="#C4F55A" stop-opacity="0.18"/>
-      <stop offset="50%" stop-color="#9DE9CB" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#0B0D0C" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1C231E" stroke-width="1"/>
+    <pattern id="rail" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#2A2F28" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="1200" height="630" fill="#0B0D0C"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
-  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#343B35" stroke-width="1.5"/>
-  <line x1="48" y1="120" x2="1152" y2="120" stroke="#343B35" stroke-width="1"/>
-  <line x1="48" y1="510" x2="1152" y2="510" stroke="#343B35" stroke-width="1"/>
-  <rect x="84" y="76" width="12" height="12" fill="#C4F55A"/>
-  <text x="110" y="88" fill="#F1F0E9" font-family="monospace" font-size="16" letter-spacing="3">PORTFÓLIO PROFISSIONAL · ENGENHARIA DE SOFTWARE</text>
-  <text x="1010" y="88" fill="#A1A69E" font-family="monospace" font-size="15">BRASIL · PT-BR</text>
 
-  <text x="84" y="255" fill="#F1F0E9" font-family="sans-serif" font-weight="700" font-size="96" letter-spacing="-3">YTALO LIMA</text>
-  <text x="84" y="315" fill="#C4F55A" font-family="monospace" font-size="22" letter-spacing="1.5">DESENVOLVEDOR DE SOFTWARE EM FORMAÇÃO</text>
-  <text x="84" y="378" fill="#A1A69E" font-family="sans-serif" font-size="25">Transformando curiosidade em tecnologia, ideias em sistemas</text>
-  <text x="84" y="414" fill="#A1A69E" font-family="sans-serif" font-size="25">e aprendizado em projetos reais.</text>
+  <rect width="1200" height="630" fill="#080907"/>
+  <rect width="1200" height="630" fill="url(#rail)" opacity="0.55"/>
 
-  <rect x="780" y="180" width="320" height="270" fill="#141815" stroke="#343B35" stroke-width="1.5"/>
-  <text x="808" y="220" fill="#9DE9CB" font-family="monospace" font-size="14" letter-spacing="2">ESTUDO DE CASO PRINCIPAL</text>
-  <text x="808" y="268" fill="#F1F0E9" font-family="sans-serif" font-weight="700" font-size="38">ATHLETIX</text>
-  <line x1="808" y1="290" x2="1072" y2="290" stroke="#343B35" stroke-width="1"/>
-  <text x="808" y="325" fill="#A1A69E" font-family="monospace" font-size="15">317 EXERCÍCIOS · 4 IDIOMAS</text>
-  <text x="808" y="356" fill="#A1A69E" font-family="monospace" font-size="15">REACT 18 · TS · SUPABASE</text>
-  <text x="808" y="387" fill="#A1A69E" font-family="monospace" font-size="15">POSTGRESQL + RLS · PWA</text>
-  <rect x="808" y="410" width="96" height="6" fill="#C4F55A"/>
+  <!-- Moldura editorial -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#454B41" stroke-width="1"/>
+  <path d="M40 40h22M40 40v22" stroke="#CDF564" stroke-width="2"/>
+  <path d="M1160 590h-22M1160 590v-22" stroke="#CDF564" stroke-width="2"/>
 
-  <text x="84" y="553" fill="#A1A69E" font-family="monospace" font-size="16">HTML5 · CSS3 · JAVASCRIPT ES6+ · ARQUITETURA &amp; PRODUTO DIGITAL</text>
-  <text x="900" y="553" fill="#F1F0E9" font-family="monospace" font-size="16">github.com/ytalo6411-art</text>
+  <!-- Cabeçalho do documento -->
+  <rect x="72" y="70" width="10" height="10" fill="#CDF564"/>
+  <text x="96" y="81" fill="#F1EEE3" font-family="monospace" font-size="15" letter-spacing="3.4">PORTFÓLIO · ENGENHARIA DE SOFTWARE</text>
+  <text x="1112" y="81" text-anchor="end" fill="#8D9285" font-family="monospace" font-size="14" letter-spacing="2.6">BRASIL · PT-BR</text>
+  <line x1="72" y1="110" x2="1128" y2="110" stroke="#2A2F28" stroke-width="1"/>
+
+  <!-- Assinatura -->
+  <text x="66" y="272" fill="#F1EEE3" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="132" font-weight="500" letter-spacing="-4">YTALO</text>
+  <text x="66" y="392" fill="#F1EEE3" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="132" font-weight="500" letter-spacing="-4">LIMA</text>
+  <circle cx="378" cy="370" r="17" fill="#F08A5D"/>
+
+  <line x1="72" y1="432" x2="640" y2="432" stroke="#454B41" stroke-width="1"/>
+  <text x="72" y="468" fill="#CDF564" font-family="monospace" font-size="17" letter-spacing="2.4">DESENVOLVEDOR DE SOFTWARE EM FORMAÇÃO</text>
+  <text x="72" y="504" fill="#B6B9AC" font-family="'Manrope', 'Helvetica Neue', Arial, sans-serif" font-size="21">Transformando curiosidade em tecnologia,</text>
+  <text x="72" y="534" fill="#B6B9AC" font-family="'Manrope', 'Helvetica Neue', Arial, sans-serif" font-size="21">ideias em sistemas e aprendizado em projetos reais.</text>
+
+  <!-- Cartão do estudo de caso -->
+  <rect x="790" y="150" width="338" height="330" fill="#131612" stroke="#454B41" stroke-width="1"/>
+  <path d="M790 150h26M790 150v26" stroke="#CDF564" stroke-width="2"/>
+  <text x="818" y="186" fill="#F08A5D" font-family="monospace" font-size="13" letter-spacing="2.4">ESTUDO DE CASO PRINCIPAL</text>
+  <text x="816" y="238" fill="#F1EEE3" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="500" letter-spacing="-1.5">ATHLETIX</text>
+  <line x1="818" y1="266" x2="1100" y2="266" stroke="#2A2F28" stroke-width="1"/>
+  <text x="818" y="300" fill="#B6B9AC" font-family="monospace" font-size="14" letter-spacing="1.2">317 EXERCÍCIOS · 4 IDIOMAS</text>
+  <text x="818" y="328" fill="#B6B9AC" font-family="monospace" font-size="14" letter-spacing="1.2">REACT 18 · TYPESCRIPT · VITE</text>
+  <text x="818" y="356" fill="#B6B9AC" font-family="monospace" font-size="14" letter-spacing="1.2">SUPABASE · POSTGRESQL + RLS</text>
+  <text x="818" y="384" fill="#B6B9AC" font-family="monospace" font-size="14" letter-spacing="1.2">PWA · VITEST · PLAYWRIGHT</text>
+  <rect x="818" y="414" width="104" height="6" fill="#CDF564"/>
+  <text x="818" y="452" fill="#8D9285" font-family="monospace" font-size="12" letter-spacing="1.8">PRODUTO PUBLICADO NA VERCEL</text>
+
+  <!-- Rodapé -->
+  <line x1="72" y1="558" x2="1128" y2="558" stroke="#2A2F28" stroke-width="1"/>
+  <text x="72" y="584" fill="#8D9285" font-family="monospace" font-size="13" letter-spacing="2">HTML5 · CSS3 · JAVASCRIPT ES6+ · PORTFÓLIO AUTORAL</text>
+  <text x="1128" y="584" text-anchor="end" fill="#F1EEE3" font-family="monospace" font-size="13" letter-spacing="1.4">github.com/ytalo6411-art</text>
 </svg>

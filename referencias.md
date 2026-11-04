@@ -21,7 +21,7 @@ Nenhuma característica abaixo foi suposta: todas as observações derivam da in
 - **Navegação**:
   - Fluxo contínuo de página única (*single-page*) com progressão clara entre apresentação pessoal, projetos e contato, além de indicador percentual no estudo do estúdio.
 - **O que será aproveitado**:
-  - A disciplina de usar **uma cor de destaque energética principal** (`#C4F55A` sobre `#0B0D0C`) em vez de múltiplas cores concorrentes.
+  - A disciplina de usar **uma cor de destaque energética principal** (`#CDF564` sobre `#080907`) em vez de múltiplas cores concorrentes.
   - O contraste entre uma fonte de título com personalidade técnica (`Space Grotesk`) e uma fonte de leitura fluida (`Manrope`), somada a marcadores inspirados em terminal (`JetBrains Mono` e índices retangulares).
   - Grid estruturado com divisores precisos.
 - **O que não será utilizado**:
@@ -108,8 +108,8 @@ Nenhuma característica abaixo foi suposta: todas as observações derivam da in
 ## Síntese das Decisões para o Portfólio de Ytalo Lima
 | Dimensão | Decisão Autoral Adotada |
 |---|---|
-| **Atmosfera** | Editorial técnico escuro (`#0B0D0C`, `#141815`, `#1C231E`) com modo claro quente (`#F4F3EC`) completo e persistente |
-| **Destaque cromático** | Verde-lima técnico (`#C4F55A`) + menta suave (`#9DE9CB`) reservados a ações, estados ativos e dados-chave |
+| **Atmosfera** | Editorial técnico escuro (`#080907`, `#0D0F0C`, `#131612`, `#1A1E19`) com modo claro quente (`#F3F0E6`) completo e persistente |
+| **Destaque cromático** | Verde-lima técnico (`#CDF564`) para sistema e ações, com cobre (`#F08A5D`) reservado à narrativa humana e ao contato |
 | **Sistema tipográfico** | `Space Grotesk` (impacto nos títulos) + `Manrope` (corpo fluido) + `JetBrains Mono` (índices, metadados e rótulos de engenharia) |
 | **Estrutura** | Grid editorial assimétrico com linhas finas (`#343B35`), numeração de seções e 50% do peso narrativo dedicado ao estudo de caso do **ATHLETIX** |
 | **Interatividade** | Funcional e acessível: tema claro/escuro, barra de progresso, galeria filtrável, lightbox acessível por teclado e validação honesta de formulário |
